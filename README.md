@@ -24,6 +24,10 @@ start a watcher that will call the `gen.clj` script whenever a file is saved.
 
 ## Publish
 
+Short story: just push the generated html to the gh-pages branch
+
+Longer story:
+
 For publishing I'm basically using this setup:
 https://medium.com/linagora-engineering/deploying-your-js-app-to-github-pages-the-easy-way-or-not-1ef8c48424b7
 
@@ -94,8 +98,8 @@ publish, `cd publish` and add, commit and `git push origin gh-pages`. Execute
 - I have created some blogs before via wordpress, gatsby, multiple markdown
   templating engines, etc. but the overhead is often too big for me. When I want
   to write, I want to write, and I don't want to 'negotiate' with broken
-  dependencies, unclear documentation, or "super-simple" config file structure
-  (that somehow always grows into a turing-complete DSL, often without backwards
+  dependencies, unclear documentation, or "super-simple" config file structures
+  (that somehow always grow into turing-complete DSLs, often without backwards
   compatibility).
 - I'm not afraid of html and want to learn (more about) CSS.
 - Constraints bring out creativity, so therefore I've constrained myself to only
@@ -115,7 +119,7 @@ publish, `cd publish` and add, commit and `git push origin gh-pages`. Execute
 
 ## Credits
 
-- https://github.com/borkdude really helped me, not only with his awesome
+- https://github.com/borkdude helped me a lot, not only with his awesome
   https://github.com/borkdude/babashka tool, but also with this particular
   setup. Thanks Michiel!
 
