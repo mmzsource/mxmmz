@@ -10,9 +10,9 @@ This repository contains the code to generate my website. It contains:
 
 To work with this code you need these dependencies:
 
-- Babashka: `https://github.com/borkdude/babashka#installation`
+- Babashka: https://github.com/borkdude/babashka#installation
 - Optionally: Babashka filewatcher pod:
-  `https://github.com/babashka/pod-babashka-filewatcher`
+  https://github.com/babashka/pod-babashka-filewatcher
 
 Once those are installed and working, you can develop and generate the website.
 
