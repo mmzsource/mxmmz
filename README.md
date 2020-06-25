@@ -84,8 +84,8 @@ git worktree add publish gh-pages
 ```
 
 That's it. Now you run `./gen.clj` and whenever you think you're ready to
-publish, `cd publish` and add, commit, push. `cd..` and you're back on your
-original branch.
+publish, `cd publish` and add, commit and `git push origin gh-pages`. Execute
+`cd ..` to get back on the master branch.
 
 ## Motivation
 
