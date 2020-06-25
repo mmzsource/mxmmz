@@ -23,10 +23,9 @@
 
 (let [index (wrap (idx/body))
       clg   (wrap (clg/body))]
-  (if (.exists (io/file "publish"))
-    (do
-      (sh "rm" "/publish/*.html")
-      (sh "rm" "/publish/posts/*.html"))
-    (sh "mkdir" "-p" "publish/posts"))
+  (when (.exists (io/file "publish"))
+    (sh "rm" "/publish/*.html")
+    (sh "rm" "/publish/posts/*.html"))
+  (sh "mkdir" "-p" "publish/posts")
   (spit "publish/index.html"                        index)
   (spit "publish/posts/clojure-learning-guide.html" clg))
