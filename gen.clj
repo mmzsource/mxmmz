@@ -18,7 +18,7 @@
    (csstools/css (css/css))])
 
 (defn wrap [body]
-  (str "<!DOCTYPE html>"
+  (str "<!DOCTYPE html>\n"
        (htmltools/html [:html head body])))
 
 (let [index (wrap (idx/body))

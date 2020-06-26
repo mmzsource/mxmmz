@@ -18,3 +18,22 @@
         (seq? v)
         (str/join " " (map html v))
         :else (str v)))
+
+(defn a
+  ([href display-name]
+   (a href display-name "_blank"))
+  ([href display-name target]
+   [:a
+     {:href   href
+      :target target}
+    display-name]))
+
+(defn ul [item]
+  [:ul item])
+
+(defn li [coll]
+  (reduce
+   (fn [acc item]
+     (conj acc (ul item)))
+   [:li]
+   coll))
