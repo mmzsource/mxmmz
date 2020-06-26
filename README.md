@@ -6,6 +6,36 @@ This repository contains the code to generate [my website](https://mmzsource.git
 - The styling
 - The scripts to develop & generate the website
 
+Nothing special here. Only Clojure files containing some functions. What might
+be a bit special is all the things that are not here: No configuration files, no
+build tools, no frameworks or libraries, no conventions ... no magic.
+
+## Motivation
+
+- It's time for me to have my own little space on the internet to share my own
+  little thoughts and coding experiments.
+- I have created some blogs before via wordpress, gatsby, multiple markdown
+  templating engines, etc. but the overhead is often too big for me. When I want
+  to write, I want to write, and I don't want to 'negotiate' with broken
+  dependencies, unclear documentation, or "super-simple" config file structures
+  (that somehow always grow into turing-complete DSLs, often without backwards
+  compatibility).
+- I'm not afraid of html and want to learn (more about) CSS.
+- Constraints bring out creativity, so therefore I've constrained myself to only
+  use clojure files (apart from the `README.md` and the `.gitignore` files).
+
+## Design decisions
+
+- Use the least possible dependencies
+- Only use clojure files
+- Stay close to standards so if my sparse dependencies break I still have
+  options:
+  - Use hiccup style html (https://github.com/weavejester/hiccup)
+  - Use hiccup style css (https://github.com/noprompt/garden)
+- Create (interactive) code examples (and their tests) in other repositories and
+  only include the generated code in this repository, so this repository stays
+  clean.
+
 ## Setup
 
 To work with this code you need these dependencies:
@@ -90,32 +120,6 @@ git worktree add publish gh-pages
 That's it. Now you run `./gen.clj` and whenever you think you're ready to
 publish, `cd publish` and add, commit and `git push origin gh-pages`. Execute
 `cd ..` to get back on the master branch.
-
-## Motivation
-
-- It's time for me to have my own little space on the internet to share my own
-  little thoughts and coding experiments.
-- I have created some blogs before via wordpress, gatsby, multiple markdown
-  templating engines, etc. but the overhead is often too big for me. When I want
-  to write, I want to write, and I don't want to 'negotiate' with broken
-  dependencies, unclear documentation, or "super-simple" config file structures
-  (that somehow always grow into turing-complete DSLs, often without backwards
-  compatibility).
-- I'm not afraid of html and want to learn (more about) CSS.
-- Constraints bring out creativity, so therefore I've constrained myself to only
-  use clojure files (apart from the `README.md` and the `.gitignore` files).
-
-## Design decisions
-
-- use the least possible dependencies
-- only use clojure files
-- stay close to standards so if my sparse dependencies break I still have
-  options
-  - use hiccup style html (https://github.com/weavejester/hiccup)
-  - use hiccup style css (https://github.com/noprompt/garden)
-- Create (interactive) code examples (and their tests) in other repositories and
-  only include the generated code in this repository, so this repository stays
-  clean.
 
 ## Credits
 
