@@ -28,12 +28,12 @@
       :target target}
     display-name]))
 
-(defn ul [item]
-  [:ul item])
+(defn li [item]
+  [:li item])
 
-(defn li [coll]
+(defn ul [coll]
   (reduce
    (fn [acc item]
-     (conj acc (ul item)))
-   [:li]
+     (conj acc (li item)))
+   [:ul]
    coll))
