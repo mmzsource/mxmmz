@@ -1,6 +1,6 @@
 # MxMMz
 
-This repository contains the code to generate my website. It contains:
+This repository contains the code to generate [my website](https://mmzsource.github.io/mxmmz/). It contains:
 
 - The content
 - The styling
