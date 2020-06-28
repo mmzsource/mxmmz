@@ -12,7 +12,10 @@
          '[tools.time :as time])
 
 (def pwd (System/getProperty "user.dir"))
+
+; (def page-to-open (io/file pwd "publish/index.html"))
 (def page-to-open (io/file pwd "publish/posts/clojure-learning-guide.html"))
+
 
 (fw/watch "site" (fn [event]
                       (when (= :write (:type event))
