@@ -115,7 +115,8 @@
   [:div
    [:h2 "Courses"]
 
-   [:p "Most of the offered Clojure courses I've done are really good. My order of preference:"]
+   [:p "Most of the Clojure courses I've done are of good quality. My order of
+   preference:"]
 
    (html/ul
     [(html/a "https://purelyfunctional.tv" "Eric Normand's Purely Functional Courses")
@@ -149,7 +150,7 @@
        (html/a "https://replete-repl.org" "Replete REPL App.")
        "I've learned a lot on it and sometimes use it to spike some ideas... or even write a "
        (html/a "https://040code.github.io/2018/08/22/maze-generation" "Maze Generator")
-       " in it when on vacation."]
+       " in it while I'm on vacation."]
 
    [:p "Replete also has an "
     (html/a "https://repl.replete-web.io" " online version.")
@@ -167,8 +168,8 @@
    talks are gathered on ClojureTV, in the "
     (html/a "https://www.youtube.com/playlist?list=PLZdCLR02grLrEwKaZv-5QbUzK0zGKOOcr"
             "Rich Hickey Talks")
-    " playlist. There's all good in their own typical way and recommended for
-    every developer, no matter what language they prefer."]
+    " playlist. I recommended every software developer to watch these talks, no
+    matter what language you prefer."]
 
    [:p "Some other talks I want to highlight:"]
 
