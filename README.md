@@ -25,7 +25,7 @@ build tools, no frameworks or libraries, no conventions ... no magic.
   popups, pay-if-you-want-to-read-more popups, subscription popups, banners and
   commercials begging for your attention, a lot of user tracking in the
   background ... I want NONE of that on this website.
-- I want stable links ... the blog I used to collaborate with (1) broke my URLs
+- I want stable links ... the platform I used to blog on (1) broke my URLs and
   (2) changed the tool-suite completely within a year. Other platforms I've
   blogged on have the same unreliability. I want more stability and robustness.
 - Constraints bring out creativity, so therefore I've constrained myself to only
@@ -35,7 +35,7 @@ build tools, no frameworks or libraries, no conventions ... no magic.
 
 - Use the least possible dependencies
 - Only use clojure files
-- Stay close to standards so if my sparse dependencies break I still have
+- Stay close to standards so when my sparse dependencies break I still have
   options:
   - Use hiccup style html (https://github.com/weavejester/hiccup)
   - Use hiccup style css (https://github.com/noprompt/garden)
