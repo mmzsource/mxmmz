@@ -303,8 +303,9 @@
     "The best place to look for exactly that tool you need for the job is "
     (html/a "https://www.clojure-toolbox.com"
             "The Clojure Toolbox")
-    "I still want to highlight some essential tools I've often used. Think of
-    them as Clojure hammers and screwdrivers: "]
+    ". I still want to highlight some essential tools I've often used. Think of
+    them as Clojure hammers and screwdrivers; in nearly every job they are
+    useful: "]
 
    (html/ul
     [(html/a "https://leiningen.org"
@@ -316,8 +317,8 @@
              "Babashka! - Leverage Clojure where you'd be using Bash otherwise")])
 
    [:p
-    "Clojure covers enterprise frontend, backend, and bash work, but did you
-    also know it covers Unity3D and Machine learning?"]
+    "Clojure covers enterprise frontend, - backend, and bash work, but did you
+    know it also covers Unity3D and Machine learning?"]
 
    (html/ul
     [(html/a "https://arcadia-unity.github.io"
@@ -343,7 +344,7 @@
 
 (defn conferences []
   [:div
-   [:h2 "Conferences: WIP"]
+   [:h2 "Conferences"]
 
    [:p
     "Some conferences I've attended or want to attend: "]
