@@ -1,6 +1,7 @@
 # MxMMz
 
-This repository contains the code to generate [my website](https://mmzsource.github.io/mxmmz/). It contains:
+This repository contains the code to generate [my
+website](https://mmzsource.github.io/mxmmz/). It contains:
 
 - The content
 - The styling
@@ -13,14 +14,20 @@ build tools, no frameworks or libraries, no conventions ... no magic.
 ## Motivation
 
 - It's time for me to have my own little space on the internet to share my own
-  little thoughts and coding experiments.
+  thoughts and coding experiments.
 - I have created some blogs before via wordpress, gatsby, multiple markdown
   templating engines, etc. but the overhead is often too big for me. When I want
   to write, I want to write, and I don't want to 'negotiate' with broken
   dependencies, unclear documentation, or "super-simple" config file structures
   (that somehow always grow into turing-complete DSLs, often without backwards
   compatibility).
-- I'm not afraid of html and want to learn (more about) CSS.
+- It looks like large parts of the web are becoming completely unusable: cookie
+  popups, pay-if-you-want-to-read-more popups, subscription popups, banners and
+  commercials begging for your attention, a lot of user tracking in the
+  background ... I want NONE of that on this website.
+- I want stable links ... the blog I used to collaborate with (1) broke my URLs
+  (2) changed the tool-suite completely within a year. Other platforms I've
+  blogged on have the same unreliability. I want more stability and robustness.
 - Constraints bring out creativity, so therefore I've constrained myself to only
   use clojure files (apart from the `README.md` and the `.gitignore` files).
 
@@ -35,6 +42,11 @@ build tools, no frameworks or libraries, no conventions ... no magic.
 - Create (interactive) code examples (and their tests) in other repositories and
   only include the generated code in this repository, so this repository stays
   clean.
+- Use stable links. Compound interest.
+- Don't get too dependent on the host (currently: github pages). I've succeeded
+  in also uploading the blog to my (domain-name) host while keeping all URLs the
+  same and changing almost nothing except for the deployment target. So there is
+  at least 1 backup strategy.
 
 ## Setup
 

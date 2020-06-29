@@ -8,10 +8,10 @@
 
 (defn intro []
   [:div
-   [:h1 "Clojure Learning Guide"]
+   [:h1 "Clojure(Script) Learning Guide"]
 
    [:p
-    "After experimenting with Clojure(script) for years, a colleague asked me to
+    "After experimenting with Clojure(Script) for years, a colleague asked me to
     share some 'getting started' links. Without further ado:"]])
 
 
@@ -19,44 +19,56 @@
   [:div
    [:h2 "Running Clojure"]
 
-   [:p "Although this list will also provide links to online Clojure(Script)
-   environments, it's always nice to start off with a working setup on your own
-   computer. For the latest guidance on this I recommend the official "
-    (html/a "https://clojure.org/guides/getting_started" "Getting Started") " page."]])
+   [:p
+    "Start with a working setup by following the official "
+    (html/a "https://clojure.org/guides/getting_started"
+            "Getting Started")
+    " page."]])
 
 
 (defn documentation []
   [:div
    [:h2 "Documentation"]
 
-   [:p "I keep coming back to almost everything on the official websites of:"]
+   [:p
+    "I keep coming back to a lot of materials on the official websites of:"]
 
    (html/ul
     [(html/a "https://clojure.org" "Clojure")
      (html/a "https://clojurescript.org" "ClojureScript")
      (html/a "https://www.datomic.com" "Datomic")])
 
-   [:p "Of course there's already a lot of helpful getting started material out
-   there: "]
+   [:p
+    "Of course there's already a lot of helpful 'getting started' material out
+    there: "]
 
    (html/ul
-    [(html/a "https://clojure.org/guides/learn/syntax" "Official getting started guide")
-     (html/a "https://yogthos.net/ClojureDistilled.html" "The excellent Clojure Distilled Guide")
-     (html/a "https://learnxinyminutes.com/docs/clojure/" "Learn X in Y where X = Clojure")
-     (html/a "https://clojure.org/api/cheatsheet" "Clojure Cheatsheet")
-     (html/a "https://cljs.info/cheatsheet/" "ClojureScript Cheatsheet")
-     (html/a "https://github.com/shaunlebron/ClojureScript-Syntax-in-15-minutes" "ClojureScript syntax in 15 minutes")
-     (html/a "http://chimeces.com/cljs-browser-repl/" "ClojureScript Web REPL")])])
+    [(html/a "https://clojure.org/guides/learn/syntax"
+             "Official getting started guide")
+     (html/a "https://yogthos.net/ClojureDistilled.html"
+             "The excellent Clojure Distilled Guide")
+     (html/a "https://learnxinyminutes.com/docs/clojure/"
+             "Learn X in Y where X = Clojure")
+     (html/a "https://clojure.org/api/cheatsheet"
+             "Clojure Cheatsheet")
+     (html/a "https://cljs.info/cheatsheet/"
+             "ClojureScript Cheatsheet")
+     (html/a "https://github.com/shaunlebron/ClojureScript-Syntax-in-15-minutes"
+             "ClojureScript syntax in 15 minutes")
+     (html/a "http://chimeces.com/cljs-browser-repl/"
+             "ClojureScript Web REPL")])])
 
 
 (defn must-read []
   [:div
    [:h2 "Must Read"]
 
-   [:p "Once you get hooked working in a REPL, you'll can't go back to slower
-   feedback cycles. Therefore, I consider "
-    (html/a "https://clojure.org/guides/repl/introduction" "Programming at the
-    REPL") " mandatory reading."]])
+   [:p
+    "Once you get used to working in a REPL, you can't go back to slower
+    feedback cycles. Therefore, I consider "
+    (html/a "https://clojure.org/guides/repl/introduction"
+            "Programming at the REPL")
+    " mandatory reading."]])
 
 
 (defn books []
@@ -69,45 +81,62 @@
     I'd recommend these books to get a good start:"]
 
    (html/ul
-    [(html/a "https://pragprog.com/titles/roclojure/" "Getting Clojure ")
-     (html/a "https://www.oreilly.com/library/view/living-clojure/9781491909270/" "Living Clojure")])
+    [(html/a "https://pragprog.com/titles/roclojure/"
+             "Getting Clojure ")
+     (html/a "https://www.oreilly.com/library/view/living-clojure/9781491909270/"
+             "Living Clojure")])
 
    [:p
     "Sometimes you only need some good examples to solve a problem at hand.
     That's where these reference books can help a lot:"]
 
    (html/ul
-    [(html/a "https://www.manning.com/books/clojure-the-essential-reference" "Clojure, The Essential Reference")
-     (html/a "https://www.oreilly.com/library/view/clojure-cookbook/9781449366384/" "Clojure Cookbook")])
-
-   [:p "A nice online book is: "
-    (html/a
-     "https://www.braveclojure.com/clojure-for-the-brave-and-true/" "Clojure for the Brave and True")]
+    [(html/a "https://www.manning.com/books/clojure-the-essential-reference"
+             "Clojure, The Essential Reference")
+     (html/a "https://www.oreilly.com/library/view/clojure-cookbook/9781449366384/"
+             "Clojure Cookbook")])
 
    [:p
-    "Other Clojure books I've enjoyed reading and learned a lot from:"]
+    "A nice online book is: "
+    (html/a "https://www.braveclojure.com/clojure-for-the-brave-and-true/"
+            "Clojure for the Brave and True")]
+
+   [:p
+    "Other Clojure books I've enjoyed reading:"]
 
    (html/ul
-    [(html/a "https://pragprog.com/titles/shcloj3/" "Programming Clojure")
-     (html/a "https://www.oreilly.com/library/view/clojure-programming/9781449310387/" "Clojure Programming")
-     (html/a "https://pragprog.com/titles/dswdcloj3/" "Web development with Clojure")
-     (html/a "https://www.manning.com/books/clojure-in-action-second-edition" "Clojure in Action")])
+    [(html/a "https://pragprog.com/titles/shcloj3/"
+             "Programming Clojure")
+     (html/a "https://www.oreilly.com/library/view/clojure-programming/9781449310387/"
+             "Clojure Programming")
+     (html/a "https://pragprog.com/titles/dswdcloj3/"
+             "Web development with Clojure")
+     (html/a "https://www.manning.com/books/clojure-in-action-second-edition"
+             "Clojure in Action")])
 
-   [:p "For the more advanced Lisp / Clojure programmers, I recommend:"]
+   [:p
+    "For the more advanced Lisp / Clojure programmers, I recommend:"]
 
    (html/ul
-    [(html/a "https://pragprog.com/titles/vmclojeco/" "Clojure Applied")
-     (html/a "https://www.manning.com/books/the-joy-of-clojure-second-edition" "The Joy of Clojure")
-     (html/a "https://leanpub.com/elementsofclojure" "Elements of Clojure")
-     (html/a "https://www.wiley.com/en-nl/Professional+Clojure-p-9781119267270" "Professional Clojure")])
+    [(html/a "https://pragprog.com/titles/vmclojeco/"
+             "Clojure Applied")
+     (html/a "https://www.manning.com/books/the-joy-of-clojure-second-edition"
+             "The Joy of Clojure")
+     (html/a "https://leanpub.com/elementsofclojure"
+             "Elements of Clojure")
+     (html/a "https://www.wiley.com/en-nl/Professional+Clojure-p-9781119267270"
+             "Professional Clojure")])
 
    [:p
     "Some 'special topic' Clojure books:"]
 
    (html/ul
-    [(html/a "https://pragprog.com/titles/cjclojure/" "Mastering Clojure Macros")
-     (html/a "https://leanpub.com/clojurepolymorphism" "Clojure Polymorphism")
-     (html/a "https://leanpub.com/clojure-java-interop" "Clojure Extended: Java Interop")])])
+    [(html/a "https://pragprog.com/titles/cjclojure/"
+             "Mastering Clojure Macros")
+     (html/a "https://leanpub.com/clojurepolymorphism"
+             "Clojure Polymorphism")
+     (html/a "https://leanpub.com/clojure-java-interop"
+             "Clojure Extended: Java Interop")])])
 
 
 (defn courses []
@@ -115,19 +144,38 @@
   [:div
    [:h2 "Courses"]
 
-   [:p "Most of the Clojure courses I've done are of good quality. My order of
-   preference:"]
+   [:p
+    "These Clojure Courses will give you a good start, and in some cases a good
+    deep dive:"]
 
    (html/ul
-    [(html/a "https://purelyfunctional.tv" "Eric Normand's Purely Functional Courses")
+    [(html/a "https://purelyfunctional.tv"
+             "Purely Functional Courses by Eric Normand")
+     (html/a "https://lambdaisland.com"
+             "Lambda Island by Arne Brasseur")
+     (html/a "https://www.jacekschae.com"
+             "ClojureScript, reagent and re-frame by Jacek Schae")
+     (html/a "http://www.parens-of-the-dead.com"
+             "Parens of the dead by Magnar Sveen")
+     (html/a "https://egri-nagy.github.io/popbook/"
+             "Poetry of Programming - Puzzle Based Introduction to Functional Programming by Egri Nagy")
+     (html/a "https://www.michielborkent.nl/clojurecursus/dictaat.html"
+             "(Dutch) Inleiding Functioneel Programmeren met Clojure by Michiel Borkent")
      (html/a "https://www.oreilly.com/library/view/clojure-inside-out/9781449368647/"
              "Clojure Inside Out - by Neal Ford and Stuart Halloway")
      (html/a "https://www.oreilly.com/library/view/functional-thinking/9781449368630/"
              "Functional Thinking by Neal Ford")
-     (html/a "https://lambdaisland.com" "Arne Brasseur's Lambda Island")
-     (html/a "https://www.youtube.com/watch?v=yWdfhQ4_Yfw" "Day of Datomic (multiple videos)")
-     (html/a "https://learn.codexpanse.com/courses/clojure-1" "Clojure Basics - by Code Expanse")
-     (html/a "http://kimh.github.io/clojure-by-example/#about" "Clojure by Example")])])
+     (html/a "https://www.youtube.com/watch?v=yWdfhQ4_Yfw"
+             "Day of Datomic (multiple videos)")
+     (html/a "https://learn.codexpanse.com/courses/clojure-1"
+             "Clojure Basics - by Code Expanse")
+     (html/a "http://kimh.github.io/clojure-by-example/#about"
+             "Clojure by Example")])
+
+   [:p
+    "Note: I'm not sponsored by any of these Course Creators. The only reasons I
+    recommend them is I've (1) actually did one or more courses on these
+    platforms and (2) think the courses are of good quality."]])
 
 
 (defn practice []
@@ -135,27 +183,35 @@
   [:div
    [:h2 "(Online) Practice"]
 
-   [:p "Some online practice sites:"]
+   [:p
+    "Some online practice sites:"]
 
    (html/ul
-    [(html/a "http://www.4clojure.com" "4Clojure")
-     (html/a "http://clojurescriptkoans.com" "Clojurescript Koans")
-     (html/a "https://exercism.io/tracks/clojure" "Clojure track on Exercism.io")
-     (html/a "https://www.codewars.com/?language=clojure" "Clojure Code Wars")])
+    [(html/a "http://www.4clojure.com"
+             "4Clojure")
+     (html/a "http://clojurescriptkoans.com"
+             "Clojurescript Koans")
+     (html/a "https://exercism.io/tracks/clojure"
+             "Clojure track on Exercism.io")
+     (html/a "https://www.codewars.com/?language=clojure"
+             "Clojure Code Wars")])
 
-   [:p "One of the things I highly recommend is to get a REPL on your Phone or
-       other mobile device. That's a really lightweight way of experimenting with
-       Clojure(Script). Therefore I recommend you install
-       the "
-       (html/a "https://replete-repl.org" "Replete REPL App.")
-       "I've learned a lot on it and sometimes use it to spike some ideas... or even write a "
-       (html/a "https://040code.github.io/2018/08/22/maze-generation" "Maze Generator")
-       " in it while I'm on vacation."]
+   [:p
+    "One of the things I highly recommend is to get a REPL on your Phone or
+    other mobile device. That's a really lightweight way of experimenting with
+    Clojure(Script). Therefore I recommend you install the "
+    (html/a "https://replete-repl.org"
+            "Replete REPL App.")
+    "I've learned a lot on it and sometimes use it to spike some ideas... or
+    even write a "
+    (html/a "https://040code.github.io/2018/08/22/maze-generation"
+            "Maze Generator")
+    " in it while I'm on vacation."]
 
-   [:p "Replete also has an "
+   [:p
+    "Replete also has an "
     (html/a "https://repl.replete-web.io" " online version.")
-    "But I if you don't have this link close, you may remember you can also
-    always fire up a repl at "
+    "You can also always fire up an online repl at "
     (html/a "https://repl.it" "Repl.it")]])
 
 
@@ -164,14 +220,16 @@
   [:div
    [:h2 "Talks"]
 
-   [:p "A lot of people are drawn to Clojure by the talks of Rich Hickey. His
-   talks are gathered on ClojureTV, in the "
+   [:p
+    "A lot of people are drawn to Clojure by the talks of Rich Hickey. His
+    talks are gathered on ClojureTV, in the "
     (html/a "https://www.youtube.com/playlist?list=PLZdCLR02grLrEwKaZv-5QbUzK0zGKOOcr"
             "Rich Hickey Talks")
     " playlist. I recommended every software developer to watch these talks, no
     matter what language you prefer."]
 
-   [:p "Some other talks I want to highlight:"]
+   [:p
+    "Some other talks I want to highlight:"]
 
    (html/ul
     [(html/a "https://www.youtube.com/watch?v=wASCH_gPnDw"
@@ -191,9 +249,9 @@
      (html/a "https://www.youtube.com/watch?v=nbMMywfBXic"
              "A Practical Functional Relational Architecture - David Nolen")])
 
-   [:p "But apart from Rich Hickey, Stuart Halloway and David Nolen, there are a
-   lot more interesting speakers (and talks) in the clojure community. Some of
-   my favorites: "]
+   [:p
+    "Some of my favorite talks by other speakers than Rich Hickey, Stuart
+    Halloway or David Nolen: "]
 
    (html/ul
     [(html/a "https://www.youtube.com/watch?v=vK1DazRK_a0"
@@ -205,9 +263,9 @@
      (html/a "https://www.youtube.com/watch?v=eLl6_k_fZn4"
              "Deep Learning Needs Clojure - Carin Meier")
      (html/a "https://www.youtube.com/watch?v=zp0OEDcAro0"
-             "Condition Systems in an Exceptional Language")
+             "Condition Systems in an Exceptional Language - Chris Houser")
      (html/a "https://www.youtube.com/watch?v=5Nm56YvTKZY"
-             "The Art of Tree Shaping with Zippers")
+             "The Art of Tree Shaping with Zippers - Arne Brasseur")
      (html/a "https://www.youtube.com/watch?v=7PoajCqNKpg"
              "Physics in Clojure - Colin Smith")
      (html/a "https://www.youtube.com/watch?v=topKYJgv6qA"
@@ -215,7 +273,8 @@
      (html/a "https://www.youtube.com/watch?v=HNp5EaRs3KI"
              "Embrace the JVM - Alexander Yakushev")])
 
-   [:p "Some of the applications of Clojure:"]
+   [:p
+    "Some applications of Clojure that also inspired me:"]
 
    (html/ul
     [(html/a "https://www.youtube.com/watch?v=QJ1qgCr09j8"
@@ -223,10 +282,11 @@
      (html/a "https://www.youtube.com/watch?v=vLlbEZt-3j0"
              "Generating art in many worlds - Dan Lidral Porter")
      (html/a "https://www.youtube.com/watch?v=zjbcayvTcKQ"
-             "Practival Generative Testing Patterns - Srihari Sriraman")])
+             "Practical Generative Testing Patterns - Srihari Sriraman")])
 
-   [:p "and a special list for Bruce Hauman who has made the programming
-   experience of ClojureScript developers so much better:"]
+   [:p
+    "and a special list for Bruce Hauman who really improved the programming
+    experience for ClojureScript developers:"]
 
    (html/ul
     [(html/a "https://www.youtube.com/watch?v=j-kj2qwJa_E"
@@ -234,27 +294,147 @@
      (html/a "https://www.youtube.com/watch?v=G7Z_g2fnEDg"
              "Live Interactive Coding: Devcards - Bruce Hauman")])])
 
+
 (defn tools []
   [:div
-   [:h2 "Tools : WIP"]])
+   [:h2 "Tools"]
+
+   [:p
+    "The best place to look for exactly that tool you need for the job is "
+    (html/a "https://www.clojure-toolbox.com"
+            "The Clojure Toolbox")
+    "I still want to highlight some essential tools I've often used. Think of
+    them as Clojure hammers and screwdrivers: "]
+
+   (html/ul
+    [(html/a "https://leiningen.org"
+             "Leiningen - a tool for project automation (project creation,
+             dependency management, running tests, building artifacts, etc)")
+     (html/a "https://clojure.org/reference/deps_and_cli"
+             "Clojure Deps & CLI - the official Clojure way of managing dependencies")
+     (html/a "https://github.com/borkdude/babashka"
+             "Babashka! - Leverage Clojure where you'd be using Bash otherwise")])
+
+   [:p
+    "Clojure covers enterprise frontend, backend, and bash work, but did you
+    also know it covers Unity3D and Machine learning?"]
+
+   (html/ul
+    [(html/a "https://arcadia-unity.github.io"
+             "Program Unity3D with Clojure")
+     (html/a "https://mxnet.apache.org/api/clojure"
+             "Machine Learning with Clojure with Apache MxNet Clojure API")])
+
+   [:p
+    "Some helpful Code Quality Tools: "]
+
+   (html/ul
+    [(html/a "https://guide.clojure.style"
+             "The Clojure Style Guide")
+     (html/a "https://github.com/borkdude/clj-kondo"
+             "clj-kondo - A linter that sparks joy")
+     (html/a "https://github.com/venantius/yagni"
+             "Yagni - A leiningen plugin for finding dead code")
+     (html/a "https://github.com/jonase/kibit"
+             "Kibit - A Static Code Analyzer")
+     (html/a "https://github.com/cloverage/cloverage"
+             "Cloverage - Test Coverage Tool")])])
+
 
 (defn conferences []
   [:div
-   [:h2 "Conferences: WIP"]])
+   [:h2 "Conferences: WIP"]
+
+   [:p
+    "Some conferences I've attended or want to attend: "]
+
+   (html/ul
+    [(html/a "https://clojuredays.org"
+             "Dutch Clojure Days in Amsterdam (Netherlands)")
+     (html/a "https://clojured.de"
+             "ClojureD in Berlin (Germany)")
+     (html/a "https://clojutre.org/"
+             "ClojureTre in Tampere (Finland)")
+     (html/a "https://heartofclojure.eu"
+             "Heart of Clojure in Leuven (Belgium)")])
+
+   [:p
+    "Since this list is very Europe centered, I suggest you take a look at the "
+    (html/a "https://purelyfunctional.tv/functional-programming-conferences/"
+            "'ultimate list of functional programming conferences'")
+    "to get an idea what functional - and Clojure conferences are organised
+    everywhere around the globe."]])
+
 
 (defn podcasts []
   [:div
-   [:h2 "Podcasts: WIP"]])
+   [:h2 "Podcasts"]
 
-(defn community []
-  [:div
-   [:h2 "Community: WIP"]])
+   [:p
+    "If you're the type of person that likes to learn about Clojure(Script)
+    while walking the dog, cooking a meal, vaccuum cleaning the house, or
+    sitting on the couch with a nice drink, you might like these podcasts:"]
+
+   (html/ul
+    [(html/a "https://cognitect.com/cognicast/"
+             "Cognicast by Cognitect")
+     (html/a "https://www.therepl.net/episodes/"
+             "The REPL by Daniel Compton")
+     (html/a "https://www.youtube.com/channel/UCYffI7NxmTBCXYQ1SvnQeRQ"
+             "Defn PodCast by Vijay Kiran and Ray McDermott")
+     (html/a "https://clojurescriptpodcast.com"
+             "ClojureScript Podcast by Jacek Schae")
+     (html/a "https://clojuredesign.club"
+             "Functional Design in Clojure by Christoph Neuann and Nate Jones")])
+
+   [:p
+    "These podcasts are less Clojure(Script) specific, and more about software
+    engineering in general:"]
+
+   (html/ul
+    [(html/a "https://lispcast.com/category/podcast/"
+             "LispCast - Thoughts on Functional Programming by Eric Normand")
+     (html/a "https://corecursive.com"
+             "CoRecursive by Adam Gordon Bell")
+     (html/a "https://www.case-podcast.org"
+             "CaSE - Conversations about Software Engineering")
+     (html/a "https://www.mixcloud.com/devnologypodcast/"
+             "Devnology Podcast")
+     (html/a "https://www.se-radio.net"
+             "Software Engineering Radio")])])
+
 
 (defn getting-started-guides []
   [:div
    [:h2 "Other Getting Started Guides"]
 
-   (html/ul [(html/a "http://www.clojurenewbieguide.com" "A Clojure Newbie Guide")])])
+   (html/ul [(html/a "http://www.clojurenewbieguide.com"
+                     "A Clojure Newbie Guide")
+             (html/a "https://www.reddit.com/r/Clojure/"
+                     "Reddit - r/Clojure - look in the resources panel")
+             (html/a "./lisp-learning-guide.html"
+                     "Lisp Learning Guide")
+             (html/a "./emacs-learning-guide.html"
+                     "Emacs Learning Guide")])])
+
+
+(defn outro []
+  [:div
+   [:h2 "Missing"]
+
+   [:p
+    "Although we've covered a lot of ground in this post, there are definitely
+    still some 'missing links'. In addition, over time there will probably be
+    broken links. If you find a broken link or think a valuable link should be
+    added, please contact me on " (html/twitter)]
+   [:p
+    "I would also be very interested in good books about Babashka and Datomic.
+    These are still missing from my library."]
+   [:p
+    "This website is cookie-, advertisement -, and user tracking free. I'm in
+    the dark here! It would be great to know if it was useful to you. If so, let
+    me know on " (html/twitter) ". Thanks for reading and I wish you a
+    meaningful and fulfilling Clojure(Script) journey!" ]])
 
 
 (defn body []
@@ -270,5 +450,5 @@
       (conj (tools))
       (conj (conferences))
       (conj (podcasts))
-      (conj (community))
-      (conj (getting-started-guides))))
+      (conj (getting-started-guides))
+      (conj (outro))))

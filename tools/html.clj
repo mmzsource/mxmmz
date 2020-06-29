@@ -37,3 +37,6 @@
      (conj acc (li item)))
    [:ul]
    coll))
+
+(defn twitter []
+  (a "https://twitter.com/MMz_" "twitter"))
