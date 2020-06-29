@@ -439,17 +439,6 @@
 
 
 (defn body []
-  (-> [:body ]
-      (conj (intro))
-      (conj (setup))
-      (conj (documentation))
-      (conj (must-read))
-      (conj (books))
-      (conj (courses))
-      (conj (practice))
-      (conj (talks))
-      (conj (tools))
-      (conj (conferences))
-      (conj (podcasts))
-      (conj (getting-started-guides))
-      (conj (outro))))
+  (reduce conj [:body ]
+   [(intro) (setup) (documentation) (must-read) (books) (courses) (practice)
+    (talks) (tools) (conferences) (podcasts) (getting-started-guides) (outro)]))
