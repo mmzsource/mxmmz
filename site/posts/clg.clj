@@ -411,6 +411,8 @@
 
    (html/ul [(html/a "http://www.clojurenewbieguide.com"
                      "A Clojure Newbie Guide")
+             (html/a "https://gist.github.com/yogthos/be323be0361c589570a6da4ccc85f58f"
+                     "Clojure Beginner Resources")
              (html/a "https://www.reddit.com/r/Clojure/"
                      "Reddit - r/Clojure - look in the resources panel")
              (html/a "./lisp-learning-guide.html"
