@@ -197,7 +197,7 @@
 (defn practice []
 
   [:div
-   [:h2 "(Online) Practice"]
+   [:h2 "Online Practice"]
 
    [:p
     "Some online practice sites:"]
@@ -459,9 +459,8 @@
    [:p
     "This website is cookie-, advertisement -, and user tracking free to give
     you the best reading experience. It would be great to know if this post was
-    useful to you. If so, let me know on " (html/twitter) ". Thank you for
-    reading all the way to the end! I wish you a meaningful and fulfilling
-    Clojure(Script) journey!" ]])
+    useful to you. Let me know what you think on " (html/twitter) ". I wish you
+    a meaningful and fulfilling Clojure(Script) journey!" ]])
 
 
 (defn body []
