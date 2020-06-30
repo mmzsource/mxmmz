@@ -12,5 +12,5 @@
          "{" (apply str (map #(str (name (key %)) ":" (val %) ";") props)) "}")))
 
 (defn css
-  [& rules]
+  [rules]
   (html/html [:style (apply str (map css-rule rules))]))
