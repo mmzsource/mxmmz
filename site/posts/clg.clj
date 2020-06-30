@@ -55,8 +55,17 @@
              "ClojureScript Cheatsheet")
      (html/a "https://github.com/shaunlebron/ClojureScript-Syntax-in-15-minutes"
              "ClojureScript syntax in 15 minutes")
+     (html/a "http://blog.josephwilk.net/clojure/functions-explained-through-patterns.html"
+             "Clojure Functions explained through (visual) patterns")
      (html/a "http://chimeces.com/cljs-browser-repl/"
-             "ClojureScript Web REPL")])])
+             "ClojureScript Web REPL")])
+
+   [:p
+    "I also want to highlight this post that explains how the classic Design
+    Patterns express themselves in Clojure: "
+    (html/a
+     "http://mishadoff.com/blog/clojure-design-patterns/"
+     "Clojure Design Patterns")]])
 
 
 (defn must-read []
@@ -99,7 +108,10 @@
    [:p
     "A nice online book is: "
     (html/a "https://www.braveclojure.com/clojure-for-the-brave-and-true/"
-            "Clojure for the Brave and True")]
+            "Clojure for the Brave and True")
+    "For ClojureScript you might like the online book: "
+    (html/a "http://langintro.com/cljsbook/"
+            "Transforming Data with ClojureScript") "."]
 
    [:p
     "Other Clojure books I've enjoyed reading:"]
@@ -155,12 +167,16 @@
              "Lambda Island by Arne Brasseur")
      (html/a "https://www.jacekschae.com"
              "ClojureScript, reagent and re-frame by Jacek Schae")
+     (html/a "https://enterpriseclojure.com"
+             "Enterprise Clojure Training by Timothy Pratley")
      (html/a "http://www.parens-of-the-dead.com"
              "Parens of the dead by Magnar Sveen")
      (html/a "https://egri-nagy.github.io/popbook/"
              "Poetry of Programming - Puzzle Based Introduction to Functional Programming by Egri Nagy")
      (html/a "https://www.michielborkent.nl/clojurecursus/dictaat.html"
              "(Dutch) Inleiding Functioneel Programmeren met Clojure by Michiel Borkent")
+     (html/a "https://aphyr.com/tags/Clojure-from-the-ground-up"
+             "Clojure from the ground up by Aphyr")
      (html/a "https://www.oreilly.com/library/view/clojure-inside-out/9781449368647/"
              "Clojure Inside Out - by Neal Ford and Stuart Halloway")
      (html/a "https://www.oreilly.com/library/view/functional-thinking/9781449368630/"
@@ -212,7 +228,19 @@
     "Replete also has an "
     (html/a "https://repl.replete-web.io" " online version.")
     "You can also always fire up an online repl at "
-    (html/a "https://repl.it" "Repl.it")]])
+    (html/a "https://repl.it" "Repl.it")]
+
+   [:p
+    "Some interactive 'notebooks' can be found here:"]
+
+   (html/ul
+    [(html/a
+      "http://viewer.gorilla-repl.org/view.html?source=github&user=lspector&repo=clojinc&path=worksheet.clj"
+      "The Gorilla REPL worksheet")
+     (html/a
+      "https://www.maria.cloud"
+      "Learn Clojure with shapes")])])
+
 
 
 (defn talks []
@@ -413,6 +441,8 @@
                      "A Clojure Newbie Guide")
              (html/a "https://gist.github.com/yogthos/be323be0361c589570a6da4ccc85f58f"
                      "Clojure Beginner Resources")
+             (html/a "https://practicalli.github.io"
+                     "Practicalli - Practical approaches to learning Functional Programming with Clojure")
              (html/a "https://www.reddit.com/r/Clojure/"
                      "Reddit - r/Clojure - look in the resources panel")
              (html/a "./lisp-learning-guide.html"
