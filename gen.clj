@@ -21,7 +21,9 @@
 
 (defn wrap [body]
   (str "<!DOCTYPE html>\n"
-       (htmltools/html [:html head body])))
+       (htmltools/html [:html
+                        head
+                        [:main body]])))
 
 (let [index (wrap (idx/body))
       clg   (wrap (clg/body))
