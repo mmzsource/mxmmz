@@ -225,7 +225,7 @@
     talks are gathered on ClojureTV, in the "
     (html/a "https://www.youtube.com/playlist?list=PLZdCLR02grLrEwKaZv-5QbUzK0zGKOOcr"
             "Rich Hickey Talks")
-    " playlist. I recommended every software developer to watch these talks, no
+    " playlist. I recommend every software developer to watch these talks, no
     matter what language you prefer."]
 
    [:p
@@ -386,7 +386,7 @@
      (html/a "https://clojurescriptpodcast.com"
              "ClojureScript Podcast by Jacek Schae")
      (html/a "https://clojuredesign.club"
-             "Functional Design in Clojure by Christoph Neuann and Nate Jones")])
+             "Functional Design in Clojure by Christoph Neumann and Nate Jones")])
 
    [:p
     "These podcasts are less Clojure(Script) specific, and more about software
