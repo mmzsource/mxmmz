@@ -189,7 +189,7 @@
              "Clojure by Example")])
 
    [:p
-    "Note: I'm not sponsored by any of these Course Creators. The only reasons I
+    "Note: I'm not sponsored by any of these course creators. The only reasons I
     recommend them is I've (1) actually did one or more courses on these
     platforms and (2) think the courses are of good quality."]])
 
@@ -214,7 +214,7 @@
 
    [:p
     "One of the things I highly recommend is to get a REPL on your Phone or
-    other mobile device. That's a really lightweight way of experimenting with
+    mobile device. That's a really lightweight way of experimenting with
     Clojure(Script). Therefore I recommend you install the "
     (html/a "https://replete-repl.org"
             "Replete REPL App.")
@@ -227,7 +227,7 @@
    [:p
     "Replete also has an "
     (html/a "https://repl.replete-web.io" " online version.")
-    "You can also always fire up an online repl at "
+    "As an (easy to remember) alternative there's also an online REPL at"
     (html/a "https://repl.it" "Repl.it")]
 
    [:p
@@ -240,7 +240,6 @@
      (html/a
       "https://www.maria.cloud"
       "Learn Clojure with shapes")])])
-
 
 
 (defn talks []
@@ -310,14 +309,8 @@
      (html/a "https://www.youtube.com/watch?v=vLlbEZt-3j0"
              "Generating art in many worlds - Dan Lidral Porter")
      (html/a "https://www.youtube.com/watch?v=zjbcayvTcKQ"
-             "Practical Generative Testing Patterns - Srihari Sriraman")])
-
-   [:p
-    "and a special list for Bruce Hauman who really improved the programming
-    experience for ClojureScript developers:"]
-
-   (html/ul
-    [(html/a "https://www.youtube.com/watch?v=j-kj2qwJa_E"
+             "Practical Generative Testing Patterns - Srihari Sriraman")
+     (html/a "https://www.youtube.com/watch?v=j-kj2qwJa_E"
              "Developing ClojureScript With Figwheel - Bruce Hauman")
      (html/a "https://www.youtube.com/watch?v=G7Z_g2fnEDg"
              "Live Interactive Coding: Devcards - Bruce Hauman")])])
@@ -328,7 +321,7 @@
    [:h2 "Tools"]
 
    [:p
-    "The best place to look for exactly that tool you need for the job is "
+    "The best place to look for the right tool for the job is "
     (html/a "https://www.clojure-toolbox.com"
             "The Clojure Toolbox")
     ". I still want to highlight some essential tools I've often used. Think of
@@ -345,8 +338,8 @@
              "Babashka! - Leverage Clojure where you'd be using Bash otherwise")])
 
    [:p
-    "Clojure covers enterprise frontend, - backend, and bash work, but did you
-    know it also covers Unity3D and Machine learning?"]
+    "Clojure covers frontend, - backend, and bash work, but did you know it also
+    covers Unity3D and Machine learning?"]
 
    (html/ul
     [(html/a "https://arcadia-unity.github.io"
@@ -464,10 +457,11 @@
     "I would also be very interested in good books about Babashka and Datomic.
     These are still missing from my library."]
    [:p
-    "This website is cookie-, advertisement -, and user tracking free. I'm in
-    the dark here! It would be great to know if it was useful to you. If so, let
-    me know on " (html/twitter) ". Thanks for reading and I wish you a
-    meaningful and fulfilling Clojure(Script) journey!" ]])
+    "This website is cookie-, advertisement -, and user tracking free to give
+    you the best reading experience. It would be great to know if this post was
+    useful to you. If so, let me know on " (html/twitter) ". Thank you for
+    reading all the way to the end! I wish you a meaningful and fulfilling
+    Clojure(Script) journey!" ]])
 
 
 (defn body []
