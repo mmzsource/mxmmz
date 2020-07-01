@@ -1,0 +1,13 @@
+* {font-family: Arial, Helvetica, sans-serif;}
+
+html {font-size: 18px;}
+
+p a {font-size: 1rem;}
+
+p {line-height: 1.5;
+   max-width: 80ch;}
+
+li {margin: 8px 0;}
+
+main {width: 80%;
+      margin: 80px auto;}
