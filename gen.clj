@@ -6,12 +6,10 @@
 (require '[clojure.java.shell :refer [sh]]
          '[clojure.java.io    :as io]
          '[site.index         :as idx]
-         '[site.css           :as css]
          '[site.posts.clg     :as clg]
          '[site.posts.lisp    :as lisp]
          '[site.posts.emacs   :as emacs]
-         '[tools.html         :as htmltools]
-         '[tools.css          :as csstools])
+         '[tools.html         :as htmltools])
 
 (defn head [{:keys [title path2root]}]
   [:head

@@ -28,17 +28,13 @@ build tools, no frameworks or libraries, no conventions ... no magic.
 - I want stable links ... the platform I used to blog on (1) broke my URLs and
   (2) changed the tool-suite completely within a year. Other platforms I've
   blogged on have the same unreliability. I want more stability and robustness.
-- Constraints bring out creativity, so therefore I've constrained myself to only
-  use clojure files (apart from the `README.md` and the `.gitignore` files).
 
 ## Design decisions
 
 - Use the least possible dependencies
 - Only use clojure files
 - Stay close to standards so when my sparse dependencies break I still have
-  options:
-  - Use hiccup style html (https://github.com/weavejester/hiccup)
-  - Use hiccup style css (https://github.com/noprompt/garden)
+  options. Therefore use hiccup style html (https://github.com/weavejester/hiccup)
 - Create (interactive) code examples (and their tests) in other repositories and
   only include the generated code in this repository, so this repository stays
   clean.
