@@ -14,7 +14,7 @@
 (def pwd (System/getProperty "user.dir"))
 
 ; (def page-to-open (io/file pwd "publish/index.html"))
-(def page-to-open (io/file pwd "publish/posts/clojure-learning-guide.html"))
+(def page-to-open (io/file pwd "publish/blog/clojure-learning-guide.html"))
 
 
 (fw/watch "site" (fn [event]

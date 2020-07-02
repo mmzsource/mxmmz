@@ -1,4 +1,4 @@
-(ns site.posts.clg)
+(ns site.blog.clg)
 
 (require '[babashka.classpath :refer [add-classpath]])
 (def userdir (System/getProperty "user.dir"))

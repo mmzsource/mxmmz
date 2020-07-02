@@ -1,4 +1,4 @@
-(ns site.posts)
+(ns site.blog)
 
 (require '[babashka.classpath :refer [add-classpath]])
 (def userdir (System/getProperty "user.dir"))
@@ -10,5 +10,5 @@
    [:h1 "Posts"]
    (html/ul
     [(html/a
-      "./posts/clojure-learning-guide.html"
+      "./blog/clojure-learning-guide.html"
       "Clojure(Script) Learning Guide")])])

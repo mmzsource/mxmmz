@@ -8,6 +8,8 @@ p a {font-size: 1rem;}
 
 main p {line-height: 1.5;}
 
+p.center {text-align: center;}
+
 li {margin: 8px 0;}
 
 header  { grid-area: header;}
@@ -76,6 +78,5 @@ body {
 	"nav     nav    nav"
 	"sidel   main   sider"
 	"footer  footer footer";
-
     }
 }
