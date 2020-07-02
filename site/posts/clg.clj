@@ -56,13 +56,13 @@
      (html/a "https://github.com/shaunlebron/ClojureScript-Syntax-in-15-minutes"
              "ClojureScript syntax in 15 minutes")
      (html/a "http://blog.josephwilk.net/clojure/functions-explained-through-patterns.html"
-             "Clojure Functions explained through (visual) patterns")
+             "Clojure functions explained through (visual) patterns")
      (html/a "http://chimeces.com/cljs-browser-repl/"
              "ClojureScript Web REPL")])
 
    [:p
-    "I also want to highlight this post that explains how the classic Design
-    Patterns express themselves in Clojure: "
+    "I also want to highlight this post that explains how the classic design
+    patterns translate Clojure: "
     (html/a
      "http://mishadoff.com/blog/clojure-design-patterns/"
      "Clojure Design Patterns")]])
@@ -108,10 +108,10 @@
    [:p
     "A nice online book is: "
     (html/a "https://www.braveclojure.com/clojure-for-the-brave-and-true/"
-            "Clojure for the Brave and True")
+            "Clojure for the Brave and True.")
     "For ClojureScript you might like the online book: "
     (html/a "http://langintro.com/cljsbook/"
-            "Transforming Data with ClojureScript") "."]
+            "Transforming Data with ClojureScript.")]
 
    [:p
     "Other Clojure books I've enjoyed reading:"]
@@ -157,7 +157,7 @@
    [:h2 "Courses"]
 
    [:p
-    "These Clojure Courses will give you a good start, and in some cases a good
+    "These Clojure courses will give you a good start, and in some cases a good
     deep dive:"]
 
    (html/ul
@@ -190,8 +190,9 @@
 
    [:p
     "Note: I'm not sponsored by any of these course creators. The only reasons I
-    recommend them is I've (1) actually did one or more courses on these
-    platforms and (2) think the courses are of good quality."]])
+    recommend them is because I've actually did one or more courses on these
+    platforms and liked them or the courses look good to me after a quick
+    scan."]])
 
 
 (defn practice []
@@ -213,15 +214,12 @@
              "Clojure Code Wars")])
 
    [:p
-    "One of the things I highly recommend is to get a REPL on your Phone or
-    mobile device. That's a really lightweight way of experimenting with
-    Clojure(Script). Therefore I recommend you install the "
-    (html/a "https://replete-repl.org"
-            "Replete REPL App.")
-    "I've learned a lot on it and sometimes use it to spike some ideas... or
-    even write a "
-    (html/a "https://040code.github.io/2018/08/22/maze-generation"
-            "Maze Generator")
+    "One of the things I highly recommend is to install "
+    (html/a "https://replete-repl.org" "Replete REPL App")
+    " on your phone or mobile device. That's a really lightweight way of
+    experimenting with Clojure(Script). I've learned a lot on it and sometimes
+    use it to spike some ideas ... or even write a "
+    (html/a "https://040code.github.io/2018/08/22/maze-generation" "Maze Generator")
     " in it while I'm on vacation."]
 
    [:p
@@ -323,8 +321,8 @@
    [:p
     "The best place to look for the right tool for the job is "
     (html/a "https://www.clojure-toolbox.com"
-            "The Clojure Toolbox")
-    ". I still want to highlight some essential tools I've often used. Think of
+            "The Clojure Toolbox.")
+    " I still want to highlight some essential tools I've often used. Think of
     them as Clojure hammers and screwdrivers; in nearly every job they are
     useful: "]
 
@@ -338,8 +336,8 @@
              "Babashka! - Leverage Clojure where you'd be using Bash otherwise")])
 
    [:p
-    "Clojure covers frontend, - backend, and bash work, but did you know it also
-    covers Unity3D and Machine learning?"]
+    "Clojure covers frontend -, backend -, and bash work, but did you know it
+    also covers Unity3D and Machine learning?"]
 
    (html/ul
     [(html/a "https://arcadia-unity.github.io"
@@ -348,7 +346,7 @@
              "Machine Learning with Clojure with Apache MxNet Clojure API")])
 
    [:p
-    "Some helpful Code Quality Tools: "]
+    "Some helpful code quality tools: "]
 
    (html/ul
     [(html/a "https://guide.clojure.style"
@@ -394,8 +392,8 @@
 
    [:p
     "If you're the type of person that likes to learn about Clojure(Script)
-    while walking the dog, cooking a meal, vaccuum cleaning the house, or
-    sitting on the couch with a nice drink, you might like these podcasts:"]
+    while cooking, cleaning the house, or sitting on the couch with a nice
+    drink, you might like these podcasts:"]
 
    (html/ul
     [(html/a "https://cognitect.com/cognicast/"
@@ -455,8 +453,9 @@
    [:p
     "This website is cookie-, advertisement -, and user tracking free to give
     you the best reading experience. It would be great to know if this post was
-    useful to you. Let me know what you think on " (html/twitter) ". I wish you
-    a meaningful and fulfilling Clojure(Script) journey!" ]])
+    useful to you. Let me know what you think on " (html/twitter)]
+   [:p
+    "I wish you a meaningful and fulfilling Clojure(Script) journey!"]])
 
 
 (defn body []

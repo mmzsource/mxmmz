@@ -20,7 +20,7 @@
 
 (def header
   [:header
-   [:h4 "MxMMz"]])
+   [:h1 "MxMMz"]])
 
 (defn nav [{:keys [path2root]}]
   [:nav
@@ -53,7 +53,7 @@
 (let [index (wrap (idx/body) {:title "MxMMz Home" :path2root "."})
       posts (wrap (posts/body) {:title "Posts" :path2root "."})
       about (wrap (about/body) {:title "About" :path2root "."})
-      clg   (wrap (clg/body) {:title "Clojure Getting Started Guide" :path2root "../"})]
+      clg   (wrap (clg/body) {:title "Clojure Learning Guide" :path2root "../"})]
   (when (.exists (io/file "publish"))
     (sh "rm" "publish/*.html")
     (sh "rm" "publish/*.css")
