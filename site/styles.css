@@ -1,13 +1,81 @@
+/* GENERAL SETTINGS */
+
 * {font-family: Arial, Helvetica, sans-serif;}
 
-html {font-size: 18px;}
+html {font-size: 16px;}
 
 p a {font-size: 1rem;}
 
-p {line-height: 1.5;
-   max-width: 80ch;}
+main p {line-height: 1.5;}
 
 li {margin: 8px 0;}
 
-main {width: 80%;
-      margin: 80px auto;}
+header  { grid-area: header;}
+nav     { grid-area: nav; }
+main    { grid-area: main; }
+footer  { grid-area: footer; }
+.sidel  { grid-area: sidel; }
+.sider  { grid-area: sider; }
+
+header,
+nav,
+main,
+footer,
+.sidel,
+.sider {
+  padding: 1em;
+}
+
+header, nav, footer, blockquote {
+    text-align: center;
+}
+
+blockquote {
+    background-color: #52ACFF;
+    background-image: linear-gradient(225deg, #52ACFF 25%, #FFE32C 100%);
+    font-size: 1.5rem;
+    color: #ffffff;
+    padding: 30px 0;
+    width: 100%;
+    max-width: vw;
+    z-index: 1;
+    margin: 80px auto;
+    align-self: center;
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+}
+
+/* SMALL SCREEN SETTINGS */
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+	"header"
+	"nav"
+	"main"
+        "footer";
+}
+
+.sider {display: none;}
+.sidel {display: none;}
+
+/* BIG SCREEN SETTINGS */
+
+@media (min-width: 40em){
+    html {font-size: 18px;}
+
+    body {
+    min-width: 100vw;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-columns: auto minmax(auto, 80ch) auto;
+    grid-template-areas:
+	"header  header header"
+	"nav     nav    nav"
+	"sidel   main   sider"
+	"footer  footer footer";
+
+    }
+}

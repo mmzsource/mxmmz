@@ -7,15 +7,9 @@
 
 (defn body []
   [:body
-   [:h1 "Welcome to MxMMz"]
-   [:h2 "Posts"]
-   (html/ul
-    [(html/a
-      "./posts/clojure-learning-guide.html"
-      "Clojure(Script) Learning Guide")
-     (html/a
-      "./posts/lisp-learning-guide.html"
-      "Lisp Learning Guide")
-     (html/a
-      "./posts/emacs-learning-guide.html"
-      "Emacs Learning Guide")])])
+   [:blockquote
+    "Neither from itself nor from another," [:br]
+    "Nor from both," [:br]
+    "Nor without a cause," [:br]
+    "Does anything whatever, anywhere arise." [:br]
+    "~ Nagarjuna"]])
