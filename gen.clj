@@ -9,15 +9,12 @@
          '[site.posts         :as posts]
          '[site.about         :as about]
          '[site.posts.clg     :as clg]
-         '[site.posts.lisp    :as lisp]
-         '[site.posts.emacs   :as emacs]
          '[tools.html         :as html])
 
 (defn head [{:keys [title path2root]}]
   [:head
    [:title title]
    [:meta {:charset "utf-8"}]
-   [:base {:target "_blank"}]
    [:link {:rel "stylesheet" :href (str path2root "/remedy.css")}]
    [:link {:rel "stylesheet" :href (str path2root "/styles.css")}]])
 
@@ -56,9 +53,7 @@
 (let [index (wrap (idx/body) {:title "MxMMz Home" :path2root "."})
       posts (wrap (posts/body) {:title "Posts" :path2root "."})
       about (wrap (about/body) {:title "About" :path2root "."})
-      clg   (wrap (clg/body) {:title "Clojure Getting Started Guide" :path2root "../"})
-      lisp  (wrap (lisp/body) {:title "Lisp Getting Started Guide" :path2root "../"})
-      emacs (wrap (emacs/body) {:title "Emacs Getting Started Guide" :path2root "../"})]
+      clg   (wrap (clg/body) {:title "Clojure Getting Started Guide" :path2root "../"})]
   (when (.exists (io/file "publish"))
     (sh "rm" "/publish/*.html")
     (sh "rm" "/publish/posts/*.html"))
@@ -68,6 +63,4 @@
   (spit "publish/index.html"                        index)
   (spit "publish/posts.html"                        posts)
   (spit "publish/about.html"                        about)
-  (spit "publish/posts/clojure-learning-guide.html" clg)
-  (spit "publish/posts/lisp-learning-guide.html"    lisp)
-  (spit "publish/posts/emacs-learning-guide.html"   emacs))
+  (spit "publish/posts/clojure-learning-guide.html" clg))

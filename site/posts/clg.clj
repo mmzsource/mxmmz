@@ -437,11 +437,7 @@
              (html/a "https://practicalli.github.io"
                      "Practicalli - Practical approaches to learning Functional Programming with Clojure")
              (html/a "https://www.reddit.com/r/Clojure/"
-                     "Reddit - r/Clojure - look in the resources panel")
-             (html/a "./lisp-learning-guide.html"
-                     "Lisp Learning Guide")
-             (html/a "./emacs-learning-guide.html"
-                     "Emacs Learning Guide")])])
+                     "Reddit - r/Clojure - look in the resources panel")])])
 
 
 (defn outro []

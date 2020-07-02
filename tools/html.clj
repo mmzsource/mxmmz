@@ -21,11 +21,8 @@
 
 (defn a
   ([href display-name]
-   (a href display-name "_blank"))
-  ([href display-name target]
    [:a
-     {:href   href
-      :target target}
+     {:href   href}
     display-name]))
 
 (defn li [item]
