@@ -55,8 +55,9 @@
       about (wrap (about/body) {:title "About" :path2root "."})
       clg   (wrap (clg/body) {:title "Clojure Getting Started Guide" :path2root "../"})]
   (when (.exists (io/file "publish"))
-    (sh "rm" "/publish/*.html")
-    (sh "rm" "/publish/posts/*.html"))
+    (sh "rm" "publish/*.html")
+    (sh "rm" "publish/*.css")
+    (sh "rm" "publish/posts/*.html"))
   (sh "mkdir" "-p" "publish/posts")
   (sh "cp" "site/remedy.css" "publish/remedy.css")
   (sh "cp" "site/styles.css" "publish/styles.css")
