@@ -26,7 +26,7 @@
   [:nav
    [:p
     (html/a (str path2root "/index.html") "Home") " "
-    (html/a (str path2root "/posts.html") "Posts") " "
+    (html/a (str path2root "/posts.html") "Blog") " "
     (html/a (str path2root "/about.html") "About")]])
 
 (def footer
@@ -51,9 +51,9 @@
                    footer])))
 
 (let [index (wrap (idx/body) {:title "MxMMz Home" :path2root "."})
-      posts (wrap (posts/body) {:title "Posts" :path2root "."})
+      posts (wrap (posts/body) {:title "Blog" :path2root "."})
       about (wrap (about/body) {:title "About" :path2root "."})
-      clg   (wrap (clg/body) {:title "Clojure Learning Guide" :path2root "../"})]
+      clg   (wrap (clg/body) {:title "Clojure Learning Guide" :path2root ".."})]
   (when (.exists (io/file "publish"))
     (sh "rm" "publish/*.html")
     (sh "rm" "publish/*.css")
