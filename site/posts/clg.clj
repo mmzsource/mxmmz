@@ -181,12 +181,18 @@
              "Clojure Inside Out - by Neal Ford and Stuart Halloway")
      (html/a "https://www.oreilly.com/library/view/functional-thinking/9781449368630/"
              "Functional Thinking by Neal Ford")
-     (html/a "https://www.youtube.com/watch?v=yWdfhQ4_Yfw"
-             "Day of Datomic (multiple videos)")
      (html/a "https://learn.codexpanse.com/courses/clojure-1"
              "Clojure Basics - by Code Expanse")
      (html/a "http://kimh.github.io/clojure-by-example/#about"
              "Clojure by Example")])
+
+   [:p "Some Datomic courses:"]
+
+   (html/ul
+    [(html/a "https://www.youtube.com/watch?v=yWdfhQ4_Yfw"
+             "Day of Datomic (multiple videos)")
+     (html/a "http://www.learndatalogtoday.org"
+             "Learn Datalog Today")])
 
    [:p
     "Note: I'm not sponsored by any of these course creators. The only reasons I
