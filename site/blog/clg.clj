@@ -167,6 +167,8 @@
              "Lambda Island by Arne Brasseur")
      (html/a "https://www.jacekschae.com"
              "ClojureScript, reagent and re-frame by Jacek Schae")
+     (html/a "https://www.pluralsight.com/courses/clojure-fundamentals-part-one"
+             "Clojure Fundamentals by Alan Dipert")
      (html/a "https://enterpriseclojure.com"
              "Enterprise Clojure Training by Timothy Pratley")
      (html/a "http://www.parens-of-the-dead.com"
@@ -424,11 +426,34 @@
              "Software Engineering Radio")])])
 
 
+(defn news []
+  [:div
+   [:h2 "News"]
+
+   [:p "Some Clojure newsletters:"]
+
+   (html/ul
+    [(html/a "https://purelyfunctional.tv/browse/#issues-section"
+             "PurelyFunctional Newsletter by Eric Normand")
+     (html/a "https://us19.campaign-archive.com/home/?u=f5dea183eae58baf7428a4425&id=ef5512dc35"
+             "Clojure Weekly by 'dotemacs'")
+     (html/a "https://us7.campaign-archive.com/home/?u=fef380870c4a5633a21f55d8e&id=b5272e542b"
+             "The REPL by Daniel Compton")
+     (html/a "https://insideclojure.org"
+             "Inside Clojure by Alex Miller")])
+
+   [:p
+    "Of course there is also a lot of blogging going on in our friendly Clojure
+    community. The best way to get connected is to keep an eye on the "
+    (html/a "http://planet.clojure.in/" "Planet Clojure") " meta blog."]])
+
 (defn getting-started-guides []
   [:div
    [:h2 "Other Getting Started Guides"]
 
-   (html/ul [(html/a "http://www.clojurenewbieguide.com"
+   (html/ul [(html/a "https://clojure.org/community/resources"
+                     "Clojure Community Resources")
+             (html/a "http://www.clojurenewbieguide.com"
                      "A Clojure Newbie Guide")
              (html/a "https://gist.github.com/yogthos/be323be0361c589570a6da4ccc85f58f"
                      "Clojure Beginner Resources")
@@ -448,8 +473,9 @@
     broken links. If you find a broken link or think a valuable link should be
     added, please contact me on " (html/twitter)]
    [:p
-    "I would also be very interested in good books about Babashka and Datomic.
-    These are still missing from my library."]
+    "I'm also very interested in good books about Babashka and Datomic. These
+    are still missing from my library, so if you know where to find them, please
+    let me know."]
    [:p
     "This website is cookie-, advertisement -, and user tracking free to give
     you the best reading experience. It would be great to know if this post was
@@ -461,4 +487,4 @@
 (defn body []
   (reduce conj [:body ]
    [(intro) (setup) (documentation) (must-read) (books) (courses) (practice)
-    (talks) (tools) (conferences) (podcasts) (getting-started-guides) (outro)]))
+    (talks) (tools) (conferences) (podcasts) (news) (getting-started-guides) (outro)]))
