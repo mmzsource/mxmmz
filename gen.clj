@@ -31,7 +31,10 @@
 
 (def footer
   [:footer
-   [:h4 "~ Dissolve and Reconstitute ~"]])
+   [:p
+    (html/a "https://twitter.com/mmz_" "Twitter")
+    (html/a "https://github.com/mmzsource" "Github")
+    (html/a "https://www.linkedin.com/in/maartenmetz/" "LinkedIn")]])
 
 (def sidel
   [:div {:class "sidel"}])

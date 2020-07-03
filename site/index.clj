@@ -4,28 +4,25 @@
   [:body
 
    [:p {:class "center"}
-    "It's a mystery how we got here ..."]
+    "When you see a real artist, one who is really good at it, then you know
+    right away that there’s such a thing as an art of motorcycle
+    maintenance."]
 
    [:blockquote
-    "Neither from itself nor from another," [:br]
-    "Nor from both," [:br]
-    "Nor without a cause," [:br]
-    "Does anything whatever, anywhere arise." [:br]
-    "~ Nagarjuna"]
+    "Art is anything you can do well." [:br]
+    "Anything where there are options for doing it well or poorly." [:br]
+    "~ Robert Pirsig"]
 
    [:p {:class "center"}
-    "Yet there's this urge to CREATE that we can't deny:"]
-
-   [:blockquote
-    "If you bring forth what is within you," [:br]
-    "what you bring forth will save you." [:br]
-    "If you do not bring forth what is within you," [:br]
-    "what you do not bring forth will destroy you." [:br]
-    "- Gospel of Thomas"]
+    "And there are very few things in this world that don’t have options for
+    doing it well. You can make an art out of anything. And I think that making
+    an art out of your technical life is solving the problem of technology."]
 
    [:p {:class "center"}
-    "Therefore:"]
+    "Quotes from Robert Pirsig, author of 'Zen and the art of motorcycle
+    maintenance'"]
 
    [:blockquote
     "Live clean, let your works be seen." [:br]
-    "Stand firm or go feed worm - Peter Tosh"]])
+    "Stand firm or go feed worm." [:br]
+    "~ Peter Tosh"]])
