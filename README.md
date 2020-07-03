@@ -32,7 +32,7 @@ build tools, no frameworks or libraries, no conventions ... no magic.
 ## Design decisions
 
 - Use the least possible dependencies
-- Only use clojure files
+- Use a stable language and ecosystem -> Clojure
 - Stay close to standards so when my sparse dependencies break I still have
   options. Therefore use hiccup style html (https://github.com/weavejester/hiccup)
 - Create (interactive) code examples (and their tests) in other repositories and

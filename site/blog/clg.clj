@@ -62,7 +62,7 @@
 
    [:p
     "I also want to highlight this post that explains how the classic design
-    patterns translate Clojure: "
+    patterns translate into Clojure: "
     (html/a
      "http://mishadoff.com/blog/clojure-design-patterns/"
      "Clojure Design Patterns")]])
@@ -192,13 +192,7 @@
     [(html/a "https://www.youtube.com/watch?v=yWdfhQ4_Yfw"
              "Day of Datomic (multiple videos)")
      (html/a "http://www.learndatalogtoday.org"
-             "Learn Datalog Today")])
-
-   [:p
-    "Note: I'm not sponsored by any of these course creators. The only reasons I
-    recommend them is because I've actually did one or more courses on these
-    platforms and liked them or the courses look good to me after a quick
-    scan."]])
+             "Learn Datalog Today")])])
 
 
 (defn practice []

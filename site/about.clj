@@ -2,4 +2,4 @@
 
 (defn body []
   [:body
-   [:blockquote "Wow, such emptiness!"]])
+   [:blockquote "Wow ... sooooo empty!"]])
