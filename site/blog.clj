@@ -7,8 +7,7 @@
 
 (defn body []
   [:body
-   [:h1 "Posts"]
-   (html/ul
-    [(html/a
-      "./blog/clojure-learning-guide.html"
-      "Clojure(Script) Learning Guide")])])
+   [:h1 {:class "center"} "Posts"]
+   [:p {:class "center"}
+    (html/a "./blog/clojure-learning-guide.html"
+            "Clojure(Script) Learning Guide")]])
