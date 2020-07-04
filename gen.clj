@@ -27,10 +27,12 @@
    [:p
     (html/a (str path2root "/index.html") "Home")
     (html/a (str path2root "/blog.html")  "Blog")
-    (html/a (str path2root "/about.html") "About")]])
+    (html/a (str path2root "/about.html") "About")]
+   [:hr]])
 
 (def footer
   [:footer
+   [:hr]
    [:p
     (html/a "https://github.com/mmzsource" "Github")
     (html/a "https://www.linkedin.com/in/maartenmetz/" "LinkedIn")
