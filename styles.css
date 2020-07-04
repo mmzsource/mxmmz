@@ -8,10 +8,6 @@ p a {font-size: 1rem;}
 
 main p {line-height: 1.5;}
 
-h1.center, h2.center, h3.center,
-h4.center, h5.center, h6.center,
-p.center {text-align: center;}
-
 li {margin: 8px 0;}
 
 header  { grid-area: header;}
@@ -33,6 +29,15 @@ footer,
 header, nav, footer, blockquote {
     text-align: center;
 }
+
+nav p a, footer p a {
+    margin-left: 0.4em;
+    margin-right: 0.4em;
+}
+
+h1.center, h2.center, h3.center,
+h4.center, h5.center, h6.center,
+p.center {text-align: center;}
 
 blockquote {
     background-color: #52ACFF;
