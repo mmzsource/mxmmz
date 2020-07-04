@@ -30,14 +30,34 @@ header, nav, footer, blockquote {
     text-align: center;
 }
 
+/* More space between the links */
+
 nav p a, footer p a {
     margin-left: 0.4em;
     margin-right: 0.4em;
 }
 
+/* More space! */
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 1.5em;
+}
+
+p {
+    margin-top: 2em;
+}
+
+ul {
+    margin-top: 1em;
+}
+
+/* Special class to align center */
+
 h1.center, h2.center, h3.center,
 h4.center, h5.center, h6.center,
 p.center {text-align: center;}
+
+/* 'Rising Sun' look and feel */
 
 blockquote {
     width: 100%;
@@ -45,7 +65,7 @@ blockquote {
     margin: 2em auto;
     padding: 1.8em 0;
     font-size: 1.5rem;
-    line-height: 0.9em;
+    line-height: 1em;
     color: #ffffff;
     background-color: #52ACFF;
     background-image: linear-gradient(225deg, #52ACFF 25%, #FFE32C 100%);
