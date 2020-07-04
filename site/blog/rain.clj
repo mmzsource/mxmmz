@@ -17,8 +17,8 @@
    [:canvas {:id "matrixrain"}]
    [:script {:src "matrixrain-js/main.js"}]
 
-   [:p "The source code can be found in my "
-    (html/a "https://github.com/mmzsource/matrixrain" "github repository.")]
+   [:p "The source code can be found "
+    (html/a "https://github.com/mmzsource/matrixrain/blob/master/src/matrixrain/core.cljs" "here.")]
 
    [:p "Detailed explanation of the source code will follow soon in this post."]])
 

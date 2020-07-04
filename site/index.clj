@@ -3,10 +3,10 @@
 (defn body []
   [:body
 
-   [:blockquote
-    "Art is anything you can do well," [:br]
-    "anything where there are options for doing it well or poorly." [:br]
-    "~ Robert Pirsig"]
+   [:blockquote {:class "big-blockquote"}
+    "Art is anything you can do well;"
+    "anything where there are options for doing it well or poorly."
+    [:span "Robert Pirsig"]]
 
    [:p {:class "center"}
     "When you see a real artist, one who is really good at it, then you know
@@ -21,6 +21,6 @@
     maintenance' and 'Lila'."]
 
    [:blockquote
-    "Live clean, let your works be seen." [:br]
-    "Stand firm or go feed worm." [:br]
-    "~ Peter Tosh"]])
+    "Live clean, let your works be seen."
+    "Stand firm or go feed worm."
+    [:span "Peter Tosh"]]])
