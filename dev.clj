@@ -15,6 +15,7 @@
 
 (def page-to-open (io/file pwd "publish/index.html"))
 ; (def page-to-open (io/file pwd "publish/blog/clojure-learning-guide.html"))
+; (def page-to-open (io/file pwd "publish/blog/matrix-rain-in-clojurescript.html"))
 
 
 (fw/watch "site" (fn [event]

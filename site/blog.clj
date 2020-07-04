@@ -10,4 +10,7 @@
    [:h1 {:class "center"} "Posts"]
    [:p {:class "center"}
     (html/a "./blog/clojure-learning-guide.html"
-            "Clojure(Script) Learning Guide")]])
+            "Clojure(Script) Learning Guide")
+    [:br]
+    (html/a "./blog/matrix-rain-in-clojurescript.html"
+            "Matrix Rain in ClojureScript")]])

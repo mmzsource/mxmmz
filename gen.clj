@@ -9,6 +9,7 @@
          '[site.blog          :as blog]
          '[site.about         :as about]
          '[site.blog.clg      :as clg]
+         '[site.blog.rain     :as rain]
          '[tools.html         :as html])
 
 (defn head [{:keys [title path2root]}]
@@ -58,7 +59,8 @@
 (let [index (wrap (idx/body)   {:title "MxMMz Home"             :path2root "."})
       blog  (wrap (blog/body)  {:title "Blog"                   :path2root "."})
       about (wrap (about/body) {:title "About"                  :path2root "."})
-      clg   (wrap (clg/body)   {:title "Clojure Learning Guide" :path2root ".."})]
+      clg   (wrap (clg/body)   {:title "Clojure Learning Guide" :path2root ".."})
+      rain  (wrap (rain/body)  {:title "Matrix Rain"            :path2root ".."})]
   (when (.exists (io/file "publish"))
     (sh "rm" "publish/*.html")
     (sh "rm" "publish/*.css")
@@ -66,7 +68,9 @@
   (sh "mkdir" "-p" "publish/blog")
   (sh "cp" "site/remedy.css" "publish/remedy.css")
   (sh "cp" "site/styles.css" "publish/styles.css")
-  (spit "publish/index.html"                       index)
-  (spit "publish/blog.html"                        blog)
-  (spit "publish/about.html"                       about)
-  (spit "publish/blog/clojure-learning-guide.html" clg))
+  (spit "publish/index.html"                             index)
+  (spit "publish/blog.html"                              blog)
+  (spit "publish/about.html"                             about)
+  (spit "publish/blog/clojure-learning-guide.html"       clg)
+  (sh "cp" "-r" "site/blog/matrixrain-js" "publish/blog/")
+  (spit "publish/blog/matrix-rain-in-clojurescript.html" rain))
