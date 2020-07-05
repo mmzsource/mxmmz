@@ -33,10 +33,10 @@
     [:div {:class "container-txt"}
 
      [:h2 "Matrix Grid"]
-     [:p "So there you have it: first you fill a grid by filling the grid cells
-     with randomly picked symbols. Now we only have to randomly change symbols
-     on the grid in a rate that looks about right and we're already done with
-     the grid. On to the raindrops."]
+     [:p "First you fill a grid by filling the grid cells with randomly picked
+     symbols. Now we only have to randomly change symbols on the grid in a rate
+     that looks about right and we're already done with the grid. On to the
+     raindrops."]
 
      [:h2 "Raindrops"]
      [:p "Now the grid is in place, the raindrops need to get the right color.
@@ -57,7 +57,8 @@
      [:h2 "Conclusion"]
      [:p "There are probably shorter, faster and smarter implementations out
      there. This was my first attempt at visualising matrix rain. I think the
-     design is quite easy to understand and implement. According
+     design is quite easy to understand and implement and the result looks
+     pretty similar to the matrix rain as seen in the Matrix movies. According
      to " (html/a "https://github.com/AlDanial/cloc" "cloc") " it took me 102
      lines of ClojureScript to get this matrix rain on my screen. I hope it
      inspires you to create something similar in your own language of choice. Be
