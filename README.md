@@ -69,9 +69,9 @@ Longer story:
 For publishing I'm basically using this setup:
 https://medium.com/linagora-engineering/deploying-your-js-app-to-github-pages-the-easy-way-or-not-1ef8c48424b7
 
-It depends on some 'configuration magic' and because the web is a rough place
-these days (and websites may go down or page URLs might change) I'm going to
-repeat (and extend) the procedure here.
+It depends on a particular git configuration and because the web is a rough
+place these days (and websites may go down or page URLs might change) I'm going
+to repeat (and extend) the procedure here.
 
 Some preconditions:
 
