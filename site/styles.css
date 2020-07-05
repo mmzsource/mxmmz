@@ -97,6 +97,17 @@ blockquote span{
   margin-top:1em;
 }
 
+.imgtxt-container .container-img {
+    margin-right: 2em;
+    margin-bottom: 1em;
+    width: auto;
+    float: left;
+}
+
+.imgtxt-container .container-txt {
+    display: inline;
+}
+
 /* SMALL SCREEN SETTINGS */
 
 body {
