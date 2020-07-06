@@ -36,7 +36,7 @@
     [:div {:class "container-txt"}
 
      [:h2 "Matrix Grid"]
-     [:p "First I've filled the cells of the grid with randomly picked symbols.
+     [:p "First, I've filled the cells of the grid with randomly picked symbols.
      After making sure the symbols on the grid change in a rate that looks about
      right, the grid is already done. On to the raindrops."]
 
