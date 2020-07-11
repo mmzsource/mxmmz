@@ -11,24 +11,29 @@
          '[clojure.java.io :as io]
          '[tools.time :as time])
 
+
 (def pwd (System/getProperty "user.dir"))
+
 
 ; (def page-to-open (io/file pwd "publish/index.html"))
 ; (def page-to-open (io/file pwd "publish/blog/clojure-learning-guide.html"))
 (def page-to-open (io/file pwd "publish/blog/matrix-rain-in-clojurescript.html"))
 
 
-(fw/watch "site" (fn [event]
-                      (when (= :write (:type event))
+;; Keeps an eye on changes in the `site` folder, runs the `gen` script on
+;; changes and opens the `page-to-open` page so changes can be seen 'on save'.
+(fw/watch "site"
+          (fn [event]
+            (when (= :write (:type event))
 
-                        (println (str (time/datetimestr) " Detected write event"))
+              (println (str (time/datetimestr) " Detected write event"))
 
-                        (sh "./gen.clj")
+              (sh "./gen.clj")
 
-                        (println (str (time/datetimestr) " Generated new site"))
+              (println (str (time/datetimestr) " Generated new site"))
 
-                        (sh "open" (str page-to-open))
+              (sh "open" (str page-to-open))
 
-                        (println (str (time/datetimestr) " Opened newly generated page " page-to-open)))))
+              (println (str (time/datetimestr) " Opened newly generated page " page-to-open)))))
 
 @(promise)
