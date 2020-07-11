@@ -12,6 +12,12 @@
          '[site.blog.rain     :as rain]
          '[tools.html         :as html])
 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; STANDARD PAGE ITEMS  ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
 (defn head [{:keys [title path2root]}]
   [:head
    [:title title]
@@ -19,9 +25,11 @@
    [:link {:rel "stylesheet" :href (str path2root "/remedy.css")}]
    [:link {:rel "stylesheet" :href (str path2root "/styles.css")}]])
 
+
 (def header
   [:header
    [:h1 "MxMMz"]])
+
 
 (defn nav [{:keys [path2root]}]
   [:nav
@@ -31,6 +39,7 @@
     (html/a (str path2root "/about.html") "About")]
    [:hr]])
 
+
 (def footer
   [:footer
    [:hr]
@@ -39,11 +48,21 @@
     (html/a "https://www.linkedin.com/in/maartenmetz/" "LinkedIn")
     (html/a "https://twitter.com/mmz_" "Twitter")]])
 
+
+;; left sidebar (used on large screen)
 (def sidel
   [:div {:class "sidel"}])
 
+
+;; right sidebar (used on large screens)
 (def sider
   [:div {:class "sider"}])
+
+
+;;;;;;;;;;;;;;;;;;;;
+;; CONSTRUCT PAGE ;;
+;;;;;;;;;;;;;;;;;;;;
+
 
 (defn wrap [body m]
   (str "<!DOCTYPE html>\n"
@@ -56,24 +75,49 @@
                    sider
                    footer])))
 
-(let [index (wrap (idx/body)   {:title "MxMMz Home"             :path2root "."})
-      blog  (wrap (blog/body)  {:title "Blog"                   :path2root "."})
-      about (wrap (about/body) {:title "About"                  :path2root "."})
-      clg   (wrap (clg/body)   {:title "Clojure Learning Guide" :path2root ".."})
-      rain  (wrap (rain/body)  {:title "Matrix Rain"            :path2root ".."})]
+
+;;;;;;;;;;;;;
+;; PUBLISH ;;
+;;;;;;;;;;;;;
+
+
+;; Do NOT remove the publish directory.
+;; It contains the .git info for the gh-pages branch
+;; and the CNAME file
+(defn prepare-publish-directories! []
   (when (.exists (io/file "publish"))
-    (sh "rm" "publish/*.html")
-    (sh "rm" "publish/*.css")
-    (sh "rm" "publish/blog/*.html")
-    (sh "rm" "-rf" "publish/blog/matrixrain-js")
-    (sh "rm" "publish/blog/matrixrain-img/*.png"))
-  (sh "mkdir" "-p" "publish/blog")
+    (sh "rm" "publish/index.html" "publish/blog.html" "publish/about.html")
+    (sh "rm" "publish/remedy.css" "publish/styles.css")
+    (sh "rm" "-rf" "publish/blog")
+    (sh "mkdir" "-p" "publish/blog/matrixrain-img/")))
+
+
+(defn copy-css! []
   (sh "cp" "site/remedy.css" "publish/remedy.css")
-  (sh "cp" "site/styles.css" "publish/styles.css")
-  (spit "publish/index.html"                             index)
-  (spit "publish/blog.html"                              blog)
-  (spit "publish/about.html"                             about)
-  (spit "publish/blog/clojure-learning-guide.html"       clg)
-  (sh "cp" "-r" "site/blog/matrixrain-js" "publish/blog/")
-  (sh "cp" "site/blog/matrixrain-img/*.png" "publish/blog/matrixrain-img/")
-  (spit "publish/blog/matrix-rain-in-clojurescript.html" rain))
+  (sh "cp" "site/styles.css" "publish/styles.css"))
+
+
+(defn publish-main-pages! []
+  (let [index (wrap (idx/body)   {:title "MxMMz Home" :path2root "."})
+        blog  (wrap (blog/body)  {:title "Blog"       :path2root "."})
+        about (wrap (about/body) {:title "About"      :path2root "."})]
+    (spit "publish/index.html" index)
+    (spit "publish/blog.html"  blog)
+    (spit "publish/about.html" about)))
+
+(defn publish-blog-pages! []
+  (let [clg   (wrap (clg/body)   {:title "Clojure Learning Guide" :path2root ".."})
+        rain  (wrap (rain/body)  {:title "Matrix Rain"            :path2root ".."})]
+    (spit "publish/blog/clojure-learning-guide.html" clg)
+
+    ; Spit MatrixRain Page (includes generated js)
+    (sh "cp" "-r" "site/blog/matrixrain-js" "publish/blog/")
+    (sh "cp" "site/blog/matrixrain-img/matrix.png" "publish/blog/matrixrain-img/")
+    (sh "cp" "site/blog/matrixrain-img/raindrop-short.png" "publish/blog/matrixrain-img/")
+    (spit "publish/blog/matrix-rain-in-clojurescript.html" rain)))
+
+(do
+  (prepare-publish-directories!)
+  (copy-css!)
+  (publish-main-pages!)
+  (publish-blog-pages!))
