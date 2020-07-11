@@ -59,6 +59,45 @@ h1.center, h2.center, h3.center,
 h4.center, h5.center, h6.center,
 p.center {text-align: center;}
 
+/* Styling the header */
+
+/* remove all text decoration from the a tags in the header */
+header a {
+    text-decoration: none;
+}
+
+/* hack to remove te spaces between the spans */
+.mxmmz {
+    font-size: 0;
+}
+
+.mxmmz span {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000f80;
+}
+
+
+/* don't display the hidden characters / margins */
+.mxmmz .hide {
+    display: none;
+}
+
+/* On hover: display all the hidden stuff */
+
+.mxmmz:hover .hide {
+    display: inline;
+}
+
+.mxmmz:hover .spaceleft {
+    margin-left: 0.3em;
+}
+
+.mxmmz:hover .subscript {
+    position: relative;
+    top: 0.18em;
+}
+
 /* Blockquote inspired by: https://codepen.io/jimmycow/pen/LmjVaz */
 
 blockquote {

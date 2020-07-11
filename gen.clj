@@ -26,9 +26,15 @@
    [:link {:rel "stylesheet" :href (str path2root "/styles.css")}]])
 
 
-(def header
+(defn header [{:keys [path2root]}]
   [:header
-   [:h1 "MxMMz"]])
+   [:a {:class "mxmmz"
+        :href (str path2root "/about.html")}
+    [:span "M"]
+    [:span {:class "hide"} "-"]
+    [:span "x"]
+    [:span {:class "spaceleft"} "MM"]
+    [:span {:class "subscript"} "z"]]])
 
 
 (defn nav [{:keys [path2root]}]
@@ -68,7 +74,7 @@
   (str "<!DOCTYPE html>\n"
        (html/html [:html
                    (head m)
-                   header
+                   (header m)
                    (nav m)
                    sidel
                    [:main body]
