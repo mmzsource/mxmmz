@@ -15,10 +15,10 @@
 (def pwd (System/getProperty "user.dir"))
 
 
-(def page-to-open (io/file pwd "publish/index.html"))
+; (def page-to-open (io/file pwd "publish/index.html"))
 ; (def page-to-open (io/file pwd "publish/blog/clojure-learning-guide.html"))
 ; (def page-to-open (io/file pwd "publish/blog/matrix-rain-in-clojurescript.html"))
-
+(def page-to-open (io/file pwd "publish/blog/building-a-website-with-babashka.html"))
 
 ;; Keeps an eye on changes in the `site` folder, runs the `gen` script on
 ;; changes and opens the `page-to-open` page so changes can be seen 'on save'.

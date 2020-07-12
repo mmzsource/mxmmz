@@ -143,6 +143,14 @@ blockquote span{
     float: left;
 }
 
+
+.imgtxt-container .container-svg {
+    margin-right: 2em;
+    margin-bottom: 1em;
+    width: 30ch;
+    float: left;
+}
+
 .imgtxt-container .container-txt {
     display: inline;
 }

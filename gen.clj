@@ -10,6 +10,7 @@
          '[site.about         :as about]
          '[site.blog.clg      :as clg]
          '[site.blog.rain     :as rain]
+         '[site.blog.bb       :as bb]
          '[tools.html         :as html])
 
 
@@ -95,7 +96,8 @@
     (sh "rm" "publish/index.html" "publish/blog.html" "publish/about.html")
     (sh "rm" "publish/remedy.css" "publish/styles.css")
     (sh "rm" "-rf" "publish/blog")
-    (sh "mkdir" "-p" "publish/blog/matrixrain-img/")))
+    (sh "mkdir" "-p" "publish/blog/matrixrain-img/")
+    (sh "mkdir" "-p" "publish/blog/babashka-img/")))
 
 
 (defn copy-css! []
@@ -112,15 +114,26 @@
     (spit "publish/about.html" about)))
 
 (defn publish-blog-pages! []
-  (let [clg   (wrap (clg/body)   {:title "Clojure Learning Guide" :path2root ".."})
-        rain  (wrap (rain/body)  {:title "Matrix Rain"            :path2root ".."})]
+  (let [clg  (wrap (clg/body)
+                   {:title "Clojure Learning Guide"
+                    :path2root ".."})
+        rain (wrap (rain/body)
+                   {:title "Matrix Rain"
+                    :path2root ".."})
+        bb   (wrap (bb/body)
+                   {:title "Building a Website with Babashka"
+                    :path2root ".."})]
     (spit "publish/blog/clojure-learning-guide.html" clg)
 
     ; Spit MatrixRain Page (includes generated js)
     (sh "cp" "-r" "site/blog/matrixrain-js" "publish/blog/")
     (sh "cp" "site/blog/matrixrain-img/matrix.png" "publish/blog/matrixrain-img/")
     (sh "cp" "site/blog/matrixrain-img/raindrop-short.png" "publish/blog/matrixrain-img/")
-    (spit "publish/blog/matrix-rain-in-clojurescript.html" rain)))
+    (spit "publish/blog/matrix-rain-in-clojurescript.html" rain)
+
+    ; Spit babashka page
+    (sh "cp" "site/blog/babashka-img/babashka.svg" "publish/blog/babashka-img/")
+    (spit "publish/blog/building-a-website-with-babashka.html" bb)))
 
 (do
   (prepare-publish-directories!)
