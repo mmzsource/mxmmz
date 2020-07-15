@@ -133,6 +133,8 @@
 
     ; Spit babashka page
     (sh "cp" "site/blog/babashka-img/babashka.svg" "publish/blog/babashka-img/")
+    (sh "cp" "site/blog/babashka-img/dependencies-tweet-gary-bernhardt.png" "publish/blog/babashka-img/")
+    (sh "cp" "site/blog/babashka-img/mxmmz-tree.png" "publish/blog/babashka-img/")
     (spit "publish/blog/building-a-website-with-babashka.html" bb)))
 
 (do
