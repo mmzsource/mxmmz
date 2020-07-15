@@ -113,6 +113,7 @@
     (spit "publish/blog.html"  blog)
     (spit "publish/about.html" about)))
 
+
 (defn publish-blog-pages! []
   (let [clg  (wrap (clg/body)
                    {:title "Clojure Learning Guide"
