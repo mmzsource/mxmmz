@@ -18,27 +18,30 @@
  <hr></hr>
 </nav>
  <div class="sidel"></div>
- <main><body><div><h1>Build a website using only Babashka</h1>
- <p>After some experience creating blogposts with wordpress, gatsby,
-   multiple markdown templating engines, etc. I felt it should be easier, more
-   robust and more maintainable to create something simple like a website.</p>
+ <main><body><div><h1>Building a website with Babashka</h1>
+ <p>After some experience creating blog posts with software offered by
+       hosting providers or by generating websites from markdown, I felt it should
+       be easier, more flexible, and more maintainable to create something simple
+       like a website.</p>
  <img alt="Dependency Hell" src="./babashka-img/dependencies-tweet-gary-bernhardt.png"></img>
- <p>When I want to write a blogpost ... I want to write a blogpost! I don't
-   want to 'negotiate' with broken dependencies, unclear or non-existent
-   documentation, spinning up containers, or supposedly simple config files.</p>
+ <p>When I want to write a blog post ... I want to write a blog post! I don't
+        want to 'negotiate' with broken dependencies, look for unclear,
+        out-of-date or non-existent documentation, spin up containers or update
+        container engines or remember conventions in supposedly simple
+        configuration files.</p>
 </div>
  <div><div class="imgtxt-container"><img alt="babashka logo" src="./babashka-img/babashka.svg" class="container-svg"></img>
  <div class="container-txt"><h2>Enter Babashka</h2>
  <p>In essence,  <a href="https://github.com/borkdude/babashka">Babashka</a>
  is a tiny Clojure interpreter tuned for shell scripting. By compiling to
-      a native binary using <a href="https://www.graalvm.org">GraalVM,</a>
+         a native binary using <a href="https://www.graalvm.org">GraalVM,</a>
  the infamous JVM startup times are GONE which makes the possibility of
-     using Clojure on the commandline a lot more attractive for a lot of Clojure
-     enthusiasts.</p>
- <p>I had been happily using Babashka for some quick and dirty shell
-     scripting when suddenly an idea struck: what if I could make a website with
-     babashka as only dependency? After all: installing and updating babashka
-     is very easy and it's available on all platforms.</p>
+         using Clojure on the command line a lot more attractive for a lot of Clojure
+         enthusiasts.</p>
+ <p>Suddenly an idea struck: <em>what if I could make a website with Babashka as <strong>only</strong>
+ dependency?</em>
+ After all: installing and updating Babashka is very easy and Babashka is
+         available on all platforms.</p>
 </div>
 </div>
 </div>
@@ -46,45 +49,50 @@
  <div class="container-txt"><h2>Design</h2>
  <p>The source code for my website can be found <a href="https://github.com/mmzsource/mxmmz">here.</a>
  The directory listing already tells a lot about my development setup
-      for this website.</p>
+         for this website.</p>
  <p>The <strong>site</strong>
- folder contains my website pages as clojure files, using
-        the <a href="https://github.com/weavejester/hiccup">hiccup</a>
+ folder contains my website pages as Clojure
+         files, using the <a href="https://github.com/weavejester/hiccup">hiccup</a>
  format. It also contains plain css files.</p>
  <p><strong>gen.clj</strong>
- is a babashka executable that generates the html
-        files from the clojure files. It puts those html files together with the
-        CSS files in the <strong>publish</strong>
+ is a Babashka executable that generates the html
+         files from the Clojure files. It puts those html files together with the
+         css files in the <strong>publish</strong>
  folder.</p>
  <p>To publish, you just <strong>./gen.clj</strong>
- that website into existence and
-        push everyting in the <strong>publish</strong>
+ that website into
+          existence and 0.1 seconds later you can start pushing everything in
+          the <strong>publish</strong>
  folder to your hosting provider.</p>
 </div>
 </div>
 </div>
  <div><h2>Bells and whistles</h2>
  <p>That's all folks! That's all you need to build a website. You could even
-      go more spartan and simply write the html yourself. That's a bit too
-      bare-bones for me. I like an occasional helper function when it's needed.
-      These helper functions are located in the <strong>tools</strong>
+       go more spartan and write the html yourself. That's a bit too bare-bones
+       for me. I like an occasional helper function when it's needed. These
+       helper functions are located in the <strong>tools</strong>
  folder.</p>
  <p>Furthermore, I got tired of refreshing my browser after updating a
-      blogpost file in my editor, so I decided to create a <strong>dev.clj</strong>
- babashka executable. It monitors my folders, runs the <strong>gen.clj</strong>
+       blog post file in my editor, so I decided to create a <strong>dev.clj</strong>
+ Babashka executable. It monitors my folders, runs the <strong>gen.clj</strong>
  script when it detects changes and then opens the refreshed page for me. It
-      comes with the cost of an additional babashka dependency: the  <a href="https://github.com/babashka/pod-babashka-filewatcher">filewatcher
-      pod.</a>
+       comes with the cost of an additional Babashka dependency: the  <a href="https://github.com/babashka/pod-babashka-filewatcher">filewatcher
+       pod.</a>
  For me that's worth it.</p>
 </div>
  <div><h2>Conclusion</h2>
  <p>Although it's not perfect (yet!) I like this setup. It's all there in
-   plain sight for me to adapt to my wishes.</p>
+       plain sight for me to adapt to my wishes. It's possible and even quite
+       simple to add generated code from other ClojureScript projects of mine
+       into this website. For instance, have a look at this <a href="https://www.mxmmz.nl/blog/matrix-rain-in-clojurescript.html">Matrix
+       Rain visualisation.</a>
+</p>
  <p>I'd like to thank <a href="https://twitter.com/borkdude">Michiel Borkent</a>
- for his awesome <a href="https://github.com/borkdude/babashka">babashka</a>
+ for his awesome <a href="https://github.com/borkdude/babashka">Babashka</a>
  tool and for helping me getting this setup up-and-running. Building a
-    website in Clojure has ever been easier (for me!). If you decide to go this
-    route as well, Michiel and I would love to hear about it!</p>
+       website in Clojure has ever been easier (for me at least). If you decide
+       to go this route as well, Michiel and I would love to hear about it!</p>
 </div>
 </body>
 </main>
