@@ -19,8 +19,7 @@
 
    [:p "When I want to write a blogpost ... I want to write a blogpost! I don't
    want to 'negotiate' with broken dependencies, unclear or non-existent
-   documentation, spinning up containers, supposedly simple config files or
-   DomainSpecificLanguages ©."]])
+   documentation, spinning up containers, or supposedly simple config files."]])
 
 (defn babashka []
   [:div
@@ -60,15 +59,14 @@
       "The directory listing already tells a lot about my development setup
       for this website."]
 
-     [:ul
-      [:li "The" [:strong "site"] "folder contains my website pages as clojure files, using
+     [:p "The" [:strong "site"] "folder contains my website pages as clojure files, using
         the" (html/a "https://github.com/weavejester/hiccup" "hiccup")
        "format. It also contains plain css files."]
-      [:li [:strong "gen.clj"] "is a babashka executable that generates the html
+      [:p [:strong "gen.clj"] "is a babashka executable that generates the html
         files from the clojure files. It puts those html files together with the
         CSS files in the" [:strong "publish"] "folder."]
-      [:li "To publish, you just" [:strong "./gen.clj"] "that website into existence and
-        push everyting in the" [:strong "publish"] "folder to your hosting provider."]]]]])
+      [:p "To publish, you just" [:strong "./gen.clj"] "that website into existence and
+        push everyting in the" [:strong "publish"] "folder to your hosting provider."]]]])
 
 (defn bells-and-whistles []
   [:div
@@ -85,16 +83,14 @@
       "script when it detects changes and then opens the refreshed page for me. It
       comes with the cost of an additional babashka dependency: the "
       (html/a "https://github.com/babashka/pod-babashka-filewatcher" "filewatcher
-      pod.") "For me that's worth the cost."] ])
+      pod.") "For me that's worth it."] ])
 
 (defn conclusion []
   [:div
    [:h2 "Conclusion"]
 
-   [:p "Although it's not perfect (yet!) I like this setup. There are no
-   configuration files, build tools, frameworks, libraries, containers,
-   conventions ... no magic. It's all there in plain sight for me to adapt to my
-   wishes."]
+   [:p "Although it's not perfect (yet!) I like this setup. It's all there in
+   plain sight for me to adapt to my wishes."]
 
    [:p "I'd like to thank"
     (html/a "https://twitter.com/borkdude" "Michiel Borkent")
