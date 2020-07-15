@@ -25,8 +25,7 @@
  <img alt="Dependency Hell" src="./babashka-img/dependencies-tweet-gary-bernhardt.png"></img>
  <p>When I want to write a blogpost ... I want to write a blogpost! I don't
    want to 'negotiate' with broken dependencies, unclear or non-existent
-   documentation, spinning up containers, supposedly simple config files or
-   DomainSpecificLanguages ©.</p>
+   documentation, spinning up containers, or supposedly simple config files.</p>
 </div>
  <div><div class="imgtxt-container"><img alt="babashka logo" src="./babashka-img/babashka.svg" class="container-svg"></img>
  <div class="container-txt"><h2>Enter Babashka</h2>
@@ -48,20 +47,19 @@
  <p>The source code for my website can be found <a href="https://github.com/mmzsource/mxmmz">here.</a>
  The directory listing already tells a lot about my development setup
       for this website.</p>
- <ul><li>The <strong>site</strong>
+ <p>The <strong>site</strong>
  folder contains my website pages as clojure files, using
         the <a href="https://github.com/weavejester/hiccup">hiccup</a>
- format. It also contains plain css files.</li>
- <li><strong>gen.clj</strong>
+ format. It also contains plain css files.</p>
+ <p><strong>gen.clj</strong>
  is a babashka executable that generates the html
         files from the clojure files. It puts those html files together with the
         CSS files in the <strong>publish</strong>
- folder.</li>
- <li>To publish, you just <strong>./gen.clj</strong>
+ folder.</p>
+ <p>To publish, you just <strong>./gen.clj</strong>
  that website into existence and
         push everyting in the <strong>publish</strong>
- folder to your hosting provider.</li>
-</ul>
+ folder to your hosting provider.</p>
 </div>
 </div>
 </div>
@@ -77,13 +75,11 @@
  script when it detects changes and then opens the refreshed page for me. It
       comes with the cost of an additional babashka dependency: the  <a href="https://github.com/babashka/pod-babashka-filewatcher">filewatcher
       pod.</a>
- For me that's worth the cost.</p>
+ For me that's worth it.</p>
 </div>
  <div><h2>Conclusion</h2>
- <p>Although it's not perfect (yet!) I like this setup. There are no
-   configuration files, build tools, frameworks, libraries, containers,
-   conventions ... no magic. It's all there in plain sight for me to adapt to my
-   wishes.</p>
+ <p>Although it's not perfect (yet!) I like this setup. It's all there in
+   plain sight for me to adapt to my wishes.</p>
  <p>I'd like to thank <a href="https://twitter.com/borkdude">Michiel Borkent</a>
  for his awesome <a href="https://github.com/borkdude/babashka">babashka</a>
  tool and for helping me getting this setup up-and-running. Building a
