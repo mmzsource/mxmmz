@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html><head><title>Building a Website with Babashka</title>
+ <meta charset="utf-8"></meta>
+ <link rel="stylesheet" href="../remedy.css"></link>
+ <link rel="stylesheet" href="../styles.css"></link>
+</head>
+ <header><a class="mxmmz" href="../about.html"><span>M</span>
+ <span class="hide">-</span>
+ <span>x</span>
+ <span class="spaceleft">MM</span>
+ <span class="subscript">z</span>
+</a>
+</header>
+ <nav><p><a href="../index.html">Home</a>
+ <a href="../blog.html">Blog</a>
+ <a href="../about.html">About</a>
+</p>
+ <hr></hr>
+</nav>
+ <div class="sidel"></div>
+ <main><body><div><h1>Build a website using only Babashka</h1>
+ <p>After some experience creating blogposts with wordpress, gatsby,
+   multiple markdown templating engines, etc. I felt it should be easier, more
+   robust and more maintainable to create something simple like a website.</p>
+ <img alt="Dependency Hell" src="./babashka-img/dependencies-tweet-gary-bernhardt.png"></img>
+ <p>When I want to write a blogpost ... I want to write a blogpost! I don't
+   want to 'negotiate' with broken dependencies, unclear or non-existent
+   documentation, spinning up containers, supposedly simple config files or
+   DomainSpecificLanguages ©.</p>
+</div>
+ <div><div class="imgtxt-container"><img alt="babashka logo" src="./babashka-img/babashka.svg" class="container-svg"></img>
+ <div class="container-txt"><h2>Enter Babashka</h2>
+ <p>In essence,  <a href="https://github.com/borkdude/babashka">Babashka</a>
+ is a tiny Clojure interpreter tuned for shell scripting. By compiling to
+      a native binary using <a href="https://www.graalvm.org">GraalVM,</a>
+ the infamous JVM startup times are GONE which makes the possibility of
+     using Clojure on the commandline a lot more attractive for a lot of Clojure
+     enthusiasts.</p>
+ <p>I had been happily using Babashka for some quick and dirty shell
+     scripting when suddenly an idea struck: what if I could make a website with
+     babashka as only dependency? After all: installing and updating babashka
+     is very easy and it's available on all platforms.</p>
+</div>
+</div>
+</div>
+ <div><div class="imgtxt-container"><img alt="File organisation" src="./babashka-img/mxmmz-tree.png" class="container-img"></img>
+ <div class="container-txt"><h2>Design</h2>
+ <p>The source code for my website can be found <a href="https://github.com/mmzsource/mxmmz">here.</a>
+ The directory listing already tells a lot about my development setup
+      for this website.</p>
+ <ul><li>The <strong>site</strong>
+ folder contains my website pages as clojure files, using
+        the <a href="https://github.com/weavejester/hiccup">hiccup</a>
+ format. It also contains plain css files.</li>
+ <li><strong>gen.clj</strong>
+ is a babashka executable that generates the html
+        files from the clojure files. It puts those html files together with the
+        CSS files in the <strong>publish</strong>
+ folder.</li>
+ <li>To publish, you just <strong>./gen.clj</strong>
+ that website into existence and
+        push everyting in the <strong>publish</strong>
+ folder to your hosting provider.</li>
+</ul>
+</div>
+</div>
+</div>
+ <div><h2>Bells and whistles</h2>
+ <p>That's all folks! That's all you need to build a website. You could even
+      go more spartan and simply write the html yourself. That's a bit too
+      bare-bones for me. I like an occasional helper function when it's needed.
+      These helper functions are located in the <strong>tools</strong>
+ folder.</p>
+ <p>Furthermore, I got tired of refreshing my browser after updating a
+      blogpost file in my editor, so I decided to create a <strong>dev.clj</strong>
+ babashka executable. It monitors my folders, runs the <strong>gen.clj</strong>
+ script when it detects changes and then opens the refreshed page for me. It
+      comes with the cost of an additional babashka dependency: the  <a href="https://github.com/babashka/pod-babashka-filewatcher">filewatcher
+      pod.</a>
+ For me that's worth the cost.</p>
+</div>
+ <div><h2>Conclusion</h2>
+ <p>Although it's not perfect (yet!) I like this setup. There are no
+   configuration files, build tools, frameworks, libraries, containers,
+   conventions ... no magic. It's all there in plain sight for me to adapt to my
+   wishes.</p>
+ <p>I'd like to thank <a href="https://twitter.com/borkdude">Michiel Borkent</a>
+ for his awesome <a href="https://github.com/borkdude/babashka">babashka</a>
+ tool and for helping me getting this setup up-and-running. Building a
+    website in Clojure has ever been easier (for me!). If you decide to go this
+    route as well, Michiel and I would love to hear about it!</p>
+</div>
+</body>
+</main>
+ <div class="sider"></div>
+ <footer><hr></hr>
+ <p><a href="https://github.com/mmzsource">Github</a>
+ <a href="https://www.linkedin.com/in/maartenmetz/">LinkedIn</a>
+ <a href="https://twitter.com/mmz_">Twitter</a>
+</p>
+</footer>
+</html>
