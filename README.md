@@ -138,4 +138,5 @@ publish, `cd publish` and add, commit and `git push origin gh-pages`. Execute
 ## License
 
 - Use the code however you want at your own risk. It is not copyrighted.
-- The posts are my work and subject to normal copyright law.
+- If you reuse parts of the code or styling, I would love to hear about it!
+- The posts and website design are my work and subject to normal copyright law.

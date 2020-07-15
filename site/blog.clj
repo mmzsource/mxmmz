@@ -13,4 +13,7 @@
             "Clojure(Script) Learning Guide")
     [:br]
     (html/a "./blog/matrix-rain-in-clojurescript.html"
-            "Matrix Rain in ClojureScript")]])
+            "Matrix Rain in ClojureScript")
+    [:br]
+    (html/a "./blog/building-a-website-with-babashka.html"
+            "Building a website with Babashka")]])
