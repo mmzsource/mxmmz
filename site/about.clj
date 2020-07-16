@@ -4,9 +4,9 @@
   [:body
    [:h2 "MxMMz?"]
 
-   [:p "Hi there, my name is Maarten Metz and my initials and last letter of my
-   last name pretty much explain the second part of this domain name. But what's
-   up with the Mx?"]
+   [:p "My name is Maarten Metz and the initials and last letter of my last name
+        pretty much explain the second part of this domain name. But what's up
+        with the Mx?"]
 
    [:h2 "Mx?"]
 
@@ -19,7 +19,7 @@
 
    [:p "If you don't remember the keyboard shortcut for a function (or the
        function has no keyboard shortcut), you can always invoke it by guessing
-       its name. You do that with the"
+       its name. That's done with the"
        [:a {:href "https://www.gnu.org/software/emacs/manual/html_node/efaq/Extended-commands.html"} "M-x"]
        "command. So for instance you can call 'M-x goto-line' to jump to a
        certain line number, or 'M-x quick-calc' to invoke a simple calculator."]
