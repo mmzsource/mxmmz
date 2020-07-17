@@ -6,7 +6,7 @@
 (require '[tools.html :as html])
 
 
-(defn intro []
+(def rain
   [:div
    [:h1 "Matrix Rain in Clojurescript"]
 
@@ -72,5 +72,4 @@
 
 
 (defn body []
-  (reduce conj [:body ]
-   [(intro)]))
+  [:body rain])

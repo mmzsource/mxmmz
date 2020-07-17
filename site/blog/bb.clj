@@ -6,7 +6,7 @@
 (require '[tools.html :as html])
 
 
-(defn intro []
+(def intro
   [:div
    [:h1 "Building a website with Babashka"]
 
@@ -24,7 +24,8 @@
         container engines or remember conventions in supposedly simple
         configuration files."]])
 
-(defn babashka []
+
+(def babashka
   [:div
    [:div {:class "imgtxt-container"}
     [:img {:class "container-svg"
@@ -48,7 +49,8 @@
          "After all: installing and updating Babashka is very easy and Babashka is
          available on all platforms."]]]])
 
-(defn design []
+
+(def design
   [:div
    [:div {:class "imgtxt-container"}
     [:img {:class "container-img"
@@ -76,7 +78,8 @@
           existence and 0.1 seconds later you can start pushing everything in
           the" [:strong "publish"] "folder to your hosting provider."]]]])
 
-(defn bells-and-whistles []
+
+(def bells-and-whistles
   [:div
    [:h2 "Bells and whistles"]
 
@@ -93,7 +96,8 @@
        (html/a "https://github.com/babashka/pod-babashka-filewatcher" "filewatcher
        pod.") "For me that's worth it."] ])
 
-(defn conclusion []
+
+(def conclusion
   [:div
    [:h2 "Conclusion"]
 
@@ -112,6 +116,6 @@
        website in Clojure has ever been easier (for me at least). If you decide
        to go this route as well, Michiel and I would love to hear about it!"]])
 
+
 (defn body []
-  (reduce conj [:body ]
-   [(intro) (babashka) (design) (bells-and-whistles) (conclusion)]))
+  [:body intro babashka design bells-and-whistles conclusion])

@@ -6,7 +6,7 @@
 (require '[tools.html :as html])
 
 
-(defn intro []
+(def intro
   [:div
    [:h1 "Clojure(Script) Learning Guide"]
 
@@ -15,7 +15,7 @@
     share some 'getting started' links. Without further ado:"]])
 
 
-(defn setup []
+(def setup
   [:div
    [:h2 "Running Clojure"]
 
@@ -26,7 +26,7 @@
     " page."]])
 
 
-(defn documentation []
+(def documentation
   [:div
    [:h2 "Documentation"]
 
@@ -68,7 +68,7 @@
      "Clojure Design Patterns")]])
 
 
-(defn must-read []
+(def must-read
   [:div
    [:h2 "Must Read"]
 
@@ -80,7 +80,7 @@
     " mandatory reading."]])
 
 
-(defn books []
+(def books
 
   [:div
    [:h2 "Books"]
@@ -151,7 +151,7 @@
              "Clojure Extended: Java Interop")])])
 
 
-(defn courses []
+(def courses
 
   [:div
    [:h2 "Courses"]
@@ -197,7 +197,7 @@
              "Learn Datalog Today")])])
 
 
-(defn practice []
+(def practice
 
   [:div
    [:h2 "Online Practice"]
@@ -242,7 +242,7 @@
       "Learn Clojure with shapes")])])
 
 
-(defn talks []
+(def talks
 
   [:div
    [:h2 "Talks"]
@@ -316,7 +316,7 @@
              "Live Interactive Coding: Devcards - Bruce Hauman")])])
 
 
-(defn tools []
+(def tools
   [:div
    [:h2 "Tools"]
 
@@ -363,7 +363,7 @@
              "Cloverage - Test Coverage Tool")])])
 
 
-(defn conferences []
+(def conferences
   [:div
    [:h2 "Conferences"]
 
@@ -388,7 +388,7 @@
     everywhere around the globe."]])
 
 
-(defn podcasts []
+(def podcasts
   [:div
    [:h2 "Podcasts"]
 
@@ -426,7 +426,7 @@
              "Software Engineering Radio")])])
 
 
-(defn news []
+(def news
   [:div
    [:h2 "News"]
 
@@ -447,7 +447,7 @@
     community. The best way to get connected is to keep an eye on the "
     (html/a "http://planet.clojure.in/" "Planet Clojure") " meta blog."]])
 
-(defn getting-started-guides []
+(def getting-started-guides
   [:div
    [:h2 "Other Getting Started Guides"]
 
@@ -463,7 +463,7 @@
                      "Reddit - r/Clojure - look in the resources panel")])])
 
 
-(defn outro []
+(def outro
   [:div
    [:h2 "Missing"]
 
@@ -485,6 +485,5 @@
 
 
 (defn body []
-  (reduce conj [:body ]
-   [(intro) (setup) (documentation) (must-read) (books) (courses) (practice)
-    (talks) (tools) (conferences) (podcasts) (news) (getting-started-guides) (outro)]))
+  [:body intro setup documentation must-read books courses practice
+   talks tools conferences podcasts news getting-started-guides outro])

@@ -2,6 +2,7 @@
 
 (require '[clojure.string :as str])
 
+
 ;; From https://github.com/borkdude/babashka/blob/master/examples/notes.clj#L21-L36
 (defn html [v]
   (cond (vector? v)
@@ -19,14 +20,17 @@
         (str/join " " (map html v))
         :else (str v)))
 
+
 (defn a
   ([href display-name]
    [:a
      {:href   href}
     display-name]))
 
+
 (defn li [item]
   [:li item])
+
 
 (defn ul [coll]
   (reduce
@@ -34,6 +38,7 @@
      (conj acc (li item)))
    [:ul]
    coll))
+
 
 (defn twitter []
   (a "https://twitter.com/MMz_" "twitter"))

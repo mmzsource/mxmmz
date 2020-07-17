@@ -135,9 +135,11 @@
         bb   (wrap (bb/body)
                    {:title "Building a Website with Babashka"
                     :path2root ".."})]
+
+    ;; Spit Clojure(Script) learning guide page
     (spit "publish/blog/clojure-learning-guide.html" clg)
 
-    ; Spit MatrixRain Page (includes generated js)
+    ; Spit MatrixRain page (includes generated js)
     (sh "cp" "-r" "site/blog/matrixrain-js" "publish/blog/")
     (sh "cp" "site/blog/matrixrain-img/matrix.png" "publish/blog/matrixrain-img/")
     (sh "cp" "site/blog/matrixrain-img/raindrop-short.png" "publish/blog/matrixrain-img/")
