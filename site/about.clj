@@ -5,9 +5,9 @@
 
    [:h2 "MxMMz?"]
 
-   [:p "My name is Maarten Metz and the initials and last letter of my last name
-        pretty much explain the second part of this domain name. But what's up
-        with the Mx?"]
+   [:p "My name is Maarten Metz and my initials combined with the last letter of
+        my last name pretty much explain the 'MMz' part of this domain name.
+        But what's up with the Mx?"]
 
    [:h2 "Mx?"]
 
