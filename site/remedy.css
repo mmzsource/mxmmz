@@ -13,7 +13,7 @@
 * I've changed the original `line-sizing` to `line-height` because the W3C CSS
 * Validation Service marked `line-sizing` as an error
 */
-html { line-heigt: normal; }
+html { line-height: normal; }
 
 /* Remove the tiny space around the edge of the page */
 body { margin: 0; }

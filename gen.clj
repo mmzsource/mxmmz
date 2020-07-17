@@ -87,17 +87,28 @@
 ;; PUBLISH ;;
 ;;;;;;;;;;;;;
 
+(defn clean-publish-directories! []
+  (sh "rm" "publish/index.html" "publish/blog.html" "publish/about.html")
+  (sh "rm" "publish/remedy.css" "publish/styles.css")
+  (sh "rm" "-rf" "publish/blog"))
+
+(defn make-publish-directories! []
+  (sh "mkdir" "-p" "publish/blog/matrixrain-img/")
+  (sh "mkdir" "-p" "publish/blog/babashka-img/"))
+
 
 ;; Do NOT remove the publish directory.
 ;; It contains the .git info for the gh-pages branch
 ;; and the CNAME file
 (defn prepare-publish-directories! []
-  (when (.exists (io/file "publish"))
-    (sh "rm" "publish/index.html" "publish/blog.html" "publish/about.html")
-    (sh "rm" "publish/remedy.css" "publish/styles.css")
-    (sh "rm" "-rf" "publish/blog")
-    (sh "mkdir" "-p" "publish/blog/matrixrain-img/")
-    (sh "mkdir" "-p" "publish/blog/babashka-img/")))
+  (if (.exists (io/file "publish"))
+    (do
+      (clean-publish-directories!)
+      (make-publish-directories!))
+    (do
+      ;; First time setup
+      (sh "mkdir" "publish")
+      (make-publish-directories!))))
 
 
 (defn copy-css! []
@@ -137,6 +148,7 @@
     (sh "cp" "site/blog/babashka-img/dependencies-tweet-gary-bernhardt.png" "publish/blog/babashka-img/")
     (sh "cp" "site/blog/babashka-img/mxmmz-tree.png" "publish/blog/babashka-img/")
     (spit "publish/blog/building-a-website-with-babashka.html" bb)))
+
 
 (do
   (prepare-publish-directories!)
