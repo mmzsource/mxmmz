@@ -59,7 +59,7 @@ h1.center, h2.center, h3.center,
 h4.center, h5.center, h6.center,
 p.center {text-align: center;}
 
-/* Styling the header */
+/* HEADER STYLING (small easter egg) */
 
 /* remove all text decoration from the a tags in the header */
 header a {
@@ -98,7 +98,7 @@ header a {
     top: 0.18em;
 }
 
-/* Blockquote inspired by: https://codepen.io/jimmycow/pen/LmjVaz */
+/* BLOCKQUOTE inspired by: https://codepen.io/jimmycow/pen/LmjVaz */
 
 blockquote {
     font-size: 1.5rem;
@@ -135,6 +135,8 @@ blockquote span{
   font-weight: bold;
   margin-top:1em;
 }
+
+/* 2 COLUMN LAYOUT WITH IMG / SVG */
 
 .imgtxt-container .container-img {
     margin-right: 2em;
