@@ -5,6 +5,6 @@
         (.format
          (.withZoneSameInstant
           (java.time.ZonedDateTime/now)
-          (java.time.ZoneId/of "UTC"))
-         (java.time.format.DateTimeFormatter/ofPattern "yyyyMMdd-HHmmss"))]
-    (clojure.string/replace formattedDateTime #"-" "T")))
+          (java.time.ZoneId/of "Europe/Amsterdam"))
+         (. java.time.format.DateTimeFormatter ISO_OFFSET_DATE_TIME))]
+    (str formattedDateTime)))
