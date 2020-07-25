@@ -3,7 +3,7 @@
 (require '[babashka.classpath :refer [add-classpath]])
 (def userdir (System/getProperty "user.dir"))
 (add-classpath userdir)
-(require '[tools.html :as html])
+(require '[tools.generate :as gen])
 
 
 (def rain
@@ -18,7 +18,7 @@
    [:script {:src "matrixrain-js/main.js"}]
 
    [:p "The source code can be found "
-    (html/a "https://github.com/mmzsource/matrixrain/blob/master/src/matrixrain/core.cljs" "here.")]
+    (gen/a "https://github.com/mmzsource/matrixrain/blob/master/src/matrixrain/core.cljs" "here.")]
 
    [:h2 "Concepts"]
    [:p "Instead of explaining the source code in detail, I thought it would be
@@ -48,7 +48,7 @@
      speed, the raindrops are done as well."]
 
      [:h2 "Glueing it together"]
-     [:p "The " (html/a "http://quil.info" "Quil library") " will take care of
+     [:p "The " (gen/a "http://quil.info" "Quil library") " will take care of
      the rendering on canvas. It only needs to know what function to call to
      'update' the matrix state and what function to call to 'draw' the current
      matrix state. The comment blocks in my code mark the different
@@ -62,10 +62,10 @@
      there. This was my first attempt at visualising matrix rain. I think the
      design is quite easy to understand and implement and the result looks
      pretty similar to the matrix rain as seen in the Matrix movies. According
-     to " (html/a "https://github.com/AlDanial/cloc" "cloc") " it took me 102
+     to " (gen/a "https://github.com/AlDanial/cloc" "cloc") " it took me 102
      lines of ClojureScript to get this matrix rain running on my screen. I hope
      it inspires you to create something similar in your own language of choice.
-     Be sure to drop me a link on " (html/twitter) " once it's up and running on
+     Be sure to drop me a link on " (gen/twitter) " once it's up and running on
      your website."]
 
      [:p "Happy coding!"]]]])

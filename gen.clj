@@ -11,7 +11,7 @@
          '[site.blog.clg      :as clg]
          '[site.blog.rain     :as rain]
          '[site.blog.bb       :as bb]
-         '[tools.html         :as html])
+         '[tools.generate     :as gen])
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -41,9 +41,9 @@
 (defn nav [{:keys [path2root]}]
   [:nav
    [:p
-    (html/a (str path2root "/index.html") "Home")
-    (html/a (str path2root "/blog.html")  "Blog")
-    (html/a (str path2root "/about.html") "About")]
+    (gen/a (str path2root "/index.html") "Home")
+    (gen/a (str path2root "/blog.html")  "Blog")
+    (gen/a (str path2root "/about.html") "About")]
    [:hr]])
 
 
@@ -51,9 +51,9 @@
   [:footer
    [:hr]
    [:p
-    (html/a "https://github.com/mmzsource" "Github")
-    (html/a "https://www.linkedin.com/in/maartenmetz/" "LinkedIn")
-    (html/a "https://twitter.com/mmz_" "Twitter")]])
+    (gen/a "https://github.com/mmzsource" "Github")
+    (gen/a "https://www.linkedin.com/in/maartenmetz/" "LinkedIn")
+    (gen/a "https://twitter.com/mmz_" "Twitter")]])
 
 
 ;; left sidebar (used on large screen)
@@ -73,7 +73,7 @@
 
 (defn wrap [body m]
   (str "<!DOCTYPE html>\n"
-       (html/html [:html
+       (gen/html [:html
                    (head m)
                    (header m)
                    (nav m)

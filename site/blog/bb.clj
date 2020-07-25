@@ -3,7 +3,7 @@
 (require '[babashka.classpath :refer [add-classpath]])
 (def userdir (System/getProperty "user.dir"))
 (add-classpath userdir)
-(require '[tools.html :as html])
+(require '[tools.generate :as gen])
 
 
 (def intro
@@ -35,10 +35,10 @@
 
      [:h2 "Enter Babashka"]
      [:p "In essence, "
-      (html/a "https://github.com/borkdude/babashka" "Babashka")
+      (gen/a "https://github.com/borkdude/babashka" "Babashka")
       "is a tiny Clojure interpreter tuned for shell scripting. By compiling to
          a native binary using"
-      (html/a "https://www.graalvm.org" "GraalVM,")
+      (gen/a "https://www.graalvm.org" "GraalVM,")
       "the infamous JVM startup times are GONE which makes the possibility of
          using Clojure on the command line a lot more attractive for a lot of Clojure
          enthusiasts."]
@@ -61,13 +61,13 @@
      [:h2 "Design"]
 
      [:p "The source code for my website can be found"
-         (html/a "https://github.com/mmzsource/mxmmz" "here.")
+         (gen/a "https://github.com/mmzsource/mxmmz" "here.")
          "The directory listing already tells a lot about my development setup
          for this website."]
 
      [:p "The" [:strong "site"] "folder contains my website pages as Clojure
          files, using the"
-         (html/a "https://github.com/weavejester/hiccup" "hiccup")
+         (gen/a "https://github.com/weavejester/hiccup" "hiccup")
          "format. It also contains plain css files."]
 
      [:p [:strong "gen.clj"] "is a Babashka executable that generates the html
@@ -93,7 +93,7 @@
        "Babashka executable. It monitors my folders, runs the" [:strong "gen.clj"]
        "script when it detects changes and then opens the refreshed page for me. It
        comes with the cost of an additional Babashka dependency: the "
-       (html/a "https://github.com/babashka/pod-babashka-filewatcher" "filewatcher
+       (gen/a "https://github.com/babashka/pod-babashka-filewatcher" "filewatcher
        pod.") "For me that's worth it."] ])
 
 
@@ -105,13 +105,13 @@
        plain sight for me to adapt to my wishes. It's possible and even quite
        simple to add generated code from other ClojureScript projects of mine
        into this website. For instance, have a look at this"
-       (html/a "https://www.mxmmz.nl/blog/matrix-rain-in-clojurescript.html" "Matrix
+       (gen/a "https://www.mxmmz.nl/blog/matrix-rain-in-clojurescript.html" "Matrix
        Rain visualisation.")]
 
    [:p "I'd like to thank"
-       (html/a "https://twitter.com/borkdude" "Michiel Borkent")
+       (gen/a "https://twitter.com/borkdude" "Michiel Borkent")
        "for his awesome"
-       (html/a "https://github.com/borkdude/babashka" "Babashka")
+       (gen/a "https://github.com/borkdude/babashka" "Babashka")
        "tool and for helping me getting this setup up-and-running. Building a
        website in Clojure has ever been easier (for me at least). If you decide
        to go this route as well, Michiel and I would love to hear about it!"]])

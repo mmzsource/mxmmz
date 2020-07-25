@@ -1,25 +1,30 @@
-(ns tools.html)
+(ns tools.generate)
 
 (require '[clojure.string :as str])
 
 
 ;; From https://github.com/borkdude/babashka/blob/master/examples/notes.clj#L21-L36
-(defn html [v]
+(defn- generate [v]
   (cond (vector? v)
         (let [tag      (first v)
               attrs    (second v)
               attrs    (when (map? attrs) attrs)
               elts     (if attrs (nnext v) (next v))
               tag-name (name tag)]
-          (format "<%s%s>%s</%s>\n" tag-name (html attrs) (html elts) tag-name))
+          (format "<%s%s>%s</%s>\n" tag-name (generate attrs) (generate elts) tag-name))
         (map? v)
         (str/join ""
                   (map (fn [[k v]]
                          (format " %s=\"%s\"" (name k) v)) v))
         (seq? v)
-        (str/join " " (map html v))
+        (str/join " " (map generate v))
         :else (str v)))
 
+(defn html [v]
+  (generate v))
+
+(defn xml [v]
+  (generate v))
 
 (defn a
   ([href display-name]
