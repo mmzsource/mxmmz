@@ -3,7 +3,31 @@
  <link rel="self" type="application/atom+xml" href="https://www.mxmmz.nl/feed/feed.xml"></link>
  <title>***TESTING*** M-x MMz Feed</title>
  <link href="https://www.mxmmz.nl"></link>
- <updated>2020-07-19T10:19:10.696276+02:00</updated>
+ <updated>2020-07-28T21:21:43.455313+02:00</updated>
  <author><name>Maarten Metz</name>
 </author>
+ <entry><title>Clojure(Script) Learning Guide</title>
+ <link href="https://www.mxmmz.nl/blog/clojure-learning-guide.html"></link>
+ <id>https://www.mxmmz.nl/blog/clojure-learning-guide.html</id>
+ <category term="Clojure"></category>
+ <content type="text">A collection of references to learn Clojure(Script)</content>
+ <published>2020-07-06T10:10:10+02:00</published>
+ <updated>2020-07-06T10:10:10+02:00</updated>
+</entry>
+ <entry><title>Matrix Rain in ClojureScript</title>
+ <link href="https://www.mxmmz.nl/blog/matrix-rain-in-clojurescript.html"></link>
+ <id>https://www.mxmmz.nl/blog/matrix-rain-in-clojurescript.html</id>
+ <category term="Clojure"></category>
+ <content type="text">How to visualise 'Matrix Rain' using ClojureScript</content>
+ <published>2020-07-06T11:11:11+02:00</published>
+ <updated>2020-07-06T11:11:11+02:00</updated>
+</entry>
+ <entry><title>Building a website with Babashka</title>
+ <link href="https://www.mxmmz.nl/blog/building-a-website-with-babashka.html"></link>
+ <id>https://www.mxmmz.nl/blog/building-a-website-with-babashka.html</id>
+ <category term="Clojure"></category>
+ <content type="text">Building a website with only 1 (!) dependency using Clojure and Babashka.</content>
+ <published>2020-07-15T15:45:00+02:00</published>
+ <updated>2020-07-15T15:45:00+02:00</updated>
+</entry>
 </feed>
