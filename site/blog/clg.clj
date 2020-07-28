@@ -6,6 +6,15 @@
 (require '[tools.generate :as gen])
 
 
+(def meta-data
+  {:title     "Clojure(Script) Learning Guide"
+   :link      "https://www.mxmmz.nl/blog/clojure-learning-guide.html"
+   :category  "Clojure"
+   :published "2020-07-06T10:10:10+02:00"
+   :updated   "2020-07-06T10:10:10+02:00"
+   :content   "A collection of references to learn Clojure(Script)"})
+
+
 (def intro
   [:div
    [:h1 "Clojure(Script) Learning Guide"]

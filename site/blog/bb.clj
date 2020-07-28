@@ -6,6 +6,15 @@
 (require '[tools.generate :as gen])
 
 
+(def meta-data
+  {:title     "Building a website with Babashka"
+   :link      "https://www.mxmmz.nl/blog/building-a-website-with-babashka.html"
+   :category  "Clojure"
+   :published "2020-07-15T15:45:00+02:00"
+   :updated   "2020-07-15T15:45:00+02:00"
+   :content   "Building a website with only 1 (!) dependency using Clojure and Babashka."})
+
+
 (def intro
   [:div
    [:h1 "Building a website with Babashka"]

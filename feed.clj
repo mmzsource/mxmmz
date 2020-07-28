@@ -2,15 +2,24 @@
 
 (require '[babashka.classpath :refer [add-classpath]])
 (add-classpath ".")
-
 (require '[clojure.java.shell :refer [sh]]
          '[tools.generate     :as    gen]
-         '[tools.time         :as    time])
+         '[tools.time         :as    time]
+         '[site.blog.clg      :as    clg]
+         '[site.blog.rain     :as    rain]
+         '[site.blog.bb       :as    bb])
 
-(def valid-tags [:clojure])
 
-(defn post-feed [post-map]
-  "bla")
+(defn post-feed [{:keys [title link category published updated content]}]
+  [:entry
+   [:title     title]
+   [:link      {:href link}]
+   [:id        link]
+   [:category  {:term category}]
+   [:content   {:type "text"} content]
+   [:published published]
+   [:updated   updated]])
+
 
 (defn blog-feed []
   (str "<?xml version='1.0' encoding='UTF-8'?>\n"
@@ -25,7 +34,13 @@
          [:link {:href "https://www.mxmmz.nl"}]
          [:updated (time/datetimestr)]
          [:author
-          [:name "Maarten Metz"]]])))
+          [:name "Maarten Metz"]]
+
+         (post-feed clg/meta-data)
+         (post-feed rain/meta-data)
+         (post-feed bb/meta-data)
+
+         ])))
 
 
 ;; This feed generation is not part of the site generation flow on purpose;

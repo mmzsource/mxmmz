@@ -2,7 +2,6 @@
 
 (require '[babashka.classpath :refer [add-classpath]])
 (add-classpath ".")
-
 (require '[clojure.java.shell :refer [sh]]
          '[clojure.java.io    :as io]
          '[site.index         :as idx]
@@ -78,7 +77,7 @@
                    (header m)
                    (nav m)
                    sidel
-                   [:main body]
+                   [:main [:article body]]
                    sider
                    footer])))
 

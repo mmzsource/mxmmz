@@ -6,6 +6,15 @@
 (require '[tools.generate :as gen])
 
 
+(def meta-data
+  {:title     "Matrix Rain in ClojureScript"
+   :link      "https://www.mxmmz.nl/blog/matrix-rain-in-clojurescript.html"
+   :category  "Clojure"
+   :published "2020-07-06T11:11:11+02:00"
+   :updated   "2020-07-06T11:11:11+02:00"
+   :content   "How to visualise 'Matrix Rain' using ClojureScript"})
+
+
 (def rain
   [:div
    [:h1 "Matrix Rain in Clojurescript"]
