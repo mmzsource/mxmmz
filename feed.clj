@@ -30,7 +30,7 @@
           {:href "https://www.mxmmz.nl/feed/feed.xml"
            :rel  "self"
            :type "application/atom+xml"}]
-         [:title "***TESTING*** M-x MMz Feed"]
+         [:title "MxMMz"]
          [:link {:href "https://www.mxmmz.nl"}]
          [:updated (time/datetimestr)]
          [:author
